@@ -16,7 +16,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         stage.setTitle("Donation Management System");
-        Scene scene = new Scene(loadFXML("app"), 640, 480);
+        Scene scene = new Scene(loadFXML("app"), 1024, 768);
         stage.setScene(scene);
         stage.show();
     }
