@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.homePageController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane layoutX="-5.0" layoutY="-4.0" prefHeight="88.0" prefWidth="686.0" style="-fx-background-color: #FAE7E7;">
+               <children>
+                  <Label layoutX="257.0" layoutY="14.0" prefHeight="59.0" prefWidth="172.0" text="Hero Blood" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="34.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: DADADA#DADADA;">
+               <children>
+                  <Label layoutX="21.0" layoutY="37.0" prefHeight="114.0" prefWidth="124.0" text="Create new donation appointment" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="DonationAppt" layoutX="56.0" layoutY="125.0" mnemonicParsing="false" text="Here" />
+               </children>
+            </Pane>
+            <Pane layoutX="453.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: DADADA#DADADA;">
+               <children>
+                  <Label layoutX="31.0" layoutY="26.0" prefHeight="117.0" prefWidth="103.0" text="Access my donor details" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="DonorDetails" layoutX="61.0" layoutY="121.0" mnemonicParsing="false" text="Here" />
+               </children>
+            </Pane>
+            <Pane layoutX="239.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: DADADA#DADADA;">
+               <children>
+                  <Label layoutX="34.0" layoutY="35.0" prefHeight="114.0" prefWidth="100.0" text="Access my appointments" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="Appt" layoutX="62.0" layoutY="123.0" mnemonicParsing="false" text="Here" />
+               </children>
+            </Pane>
+            <Label layoutX="282.0" layoutY="95.0" prefHeight="35.0" prefWidth="115.0" text="Welcome, FName" textAlignment="CENTER" AnchorPane.leftAnchor="282.0" AnchorPane.topAnchor="95.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="594.0" layoutY="24.0" mnemonicParsing="false" text="Log out" />
+   </children>
+</AnchorPane>
