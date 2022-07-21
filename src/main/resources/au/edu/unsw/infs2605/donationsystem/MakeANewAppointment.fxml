@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="303.0" layoutY="64.0" prefHeight="99.0" prefWidth="297.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
+         <children>
+            <Label layoutX="72.0" layoutY="8.0" text="Thank You" textFill="#e88324">
+               <font>
+                  <Font name="Arial Black" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="49.0" prefHeight="46.0" prefWidth="178.0" text="Thank you for registering your interest. Your donation will save many lives" textAlignment="CENTER" textFill="#9e6838" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" layoutY="158.0" opacity="0.85" prefHeight="237.0" prefWidth="297.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
+         <children>
+            <Label layoutX="60.0" layoutY="14.0" text="What donation would you like to make?">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="68.0" text="Which donation centre would you like to choose?">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="38.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="237.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </MenuButton>
+            <DatePicker layoutX="39.0" layoutY="149.0" prefHeight="31.0" prefWidth="142.0" promptText="04/04/2022" />
+            <MenuButton layoutX="40.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="237.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </MenuButton>
+            <Label layoutX="46.0" layoutY="125.0" text="Choose an available appointment time:">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="39.0" layoutY="190.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" text="Clear Input">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="152.0" layoutY="190.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="123.0" text="Confirm your booking" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <MenuButton layoutX="186.0" layoutY="149.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="89.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </MenuButton>
+         </children>
+      </Pane>
+      <Pane layoutX="-9.0" layoutY="-5.0" prefHeight="70.0" prefWidth="611.0" style="-fx-background-color: #FF4848#FF4848 #FF4848#FF4848;">
+         <children>
+            <Label layoutX="116.0" layoutY="7.0" prefHeight="59.0" prefWidth="398.0" text="Make a New Appointment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="550.0" layoutY="19.0" mnemonicParsing="false" text="Home">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="82.0" layoutY="211.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="154.0" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Label layoutX="28.0" layoutY="164.0" text="No option for a donation centre near you?">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

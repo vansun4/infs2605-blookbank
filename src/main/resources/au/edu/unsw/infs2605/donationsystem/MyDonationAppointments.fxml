@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="33.0" layoutY="190.0" prefHeight="78.0" prefWidth="260.0" style="-fx-background-color: #FCD5B0#FCD5B0;">
+         <children>
+            <Label layoutX="92.0" layoutY="14.0" text="Donation Type:">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" layoutX="12.0" layoutY="39.0" prefHeight="26.0" prefWidth="236.0" promptText="Plasma " style="-fx-position-shape: circle;">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Button layoutX="56.0" layoutY="360.0" mnemonicParsing="false" style="-fx-background-color: #EDFCDA#EDFCDA;" text="Update my Appointment ">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="221.0" layoutY="360.0" mnemonicParsing="false" style="-fx-background-color: #FB8B8B#FB8B8B;" text="Delete my Appointment">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="375.0" layoutY="360.0" mnemonicParsing="false" style="-fx-background-color: #BCD7F7#BCD7F7;" text="Generate Appointment Receipt">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <TableView layoutX="33.0" layoutY="79.0" opacity="0.89" prefHeight="103.0" prefWidth="469.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
+        <columns>
+          <TableColumn prefWidth="128.0" text="Donation Type " />
+          <TableColumn prefWidth="130.0" text="Donor Centre" />
+            <TableColumn prefWidth="130.0" text="Date" />
+            <TableColumn prefWidth="103.0" text="Time" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="306.0" layoutY="190.0" prefHeight="78.0" prefWidth="260.0" style="-fx-background-color: #FCD5B0#FCD5B0;">
+         <children>
+            <Label layoutX="80.0" layoutY="14.0" text="Appointment Centre:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" layoutX="12.0" layoutY="39.0" prefHeight="26.0" prefWidth="236.0" promptText="Randwick Blood Centre" style="-fx-position-shape: circle;">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="274.0" prefHeight="78.0" prefWidth="260.0" style="-fx-background-color: #FCD5B0#FCD5B0;">
+         <children>
+            <Label layoutX="92.0" layoutY="14.0" text="Appointment Date:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <DatePicker layoutX="12.0" layoutY="39.0" prefHeight="26.0" prefWidth="236.0" promptText="01/01/2022" />
+         </children>
+      </Pane>
+      <Pane layoutX="306.0" layoutY="274.0" prefHeight="78.0" prefWidth="260.0" style="-fx-background-color: #FCD5B0#FCD5B0;">
+         <children>
+            <Label layoutX="82.0" layoutY="14.0" text="Appointment Time:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" layoutX="12.0" layoutY="39.0" prefHeight="26.0" prefWidth="236.0" promptText="4:30 PM" style="-fx-position-shape: circle;">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="-5.0" prefHeight="70.0" prefWidth="606.0" style="-fx-background-color: #FF4848#FF4848 #FF4848#FF4848;">
+         <children>
+            <Label layoutX="116.0" layoutY="7.0" prefHeight="59.0" prefWidth="423.0" text="My Donation Appointments" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="549.0" layoutY="14.0" mnemonicParsing="false" text="Home">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="508.0" layoutY="79.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="86.0" style="-fx-background-color: #EDFCDA#EDFCDA #EDFCDA#EDFCDA;" text="Make a New Appointment" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="508.0" layoutY="138.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="86.0" style="-fx-background-color: #FB8B8B#FB8B8B #FB8B8B#FB8B8B;" text="Delete all Associated Slots" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

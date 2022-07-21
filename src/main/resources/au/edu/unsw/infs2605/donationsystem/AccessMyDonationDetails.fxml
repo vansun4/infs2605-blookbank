@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="220.0" layoutY="124.0" text="First Name:" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="124.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="175.0" text="Email Address:" AnchorPane.leftAnchor="219.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="278.0" text="Address:" AnchorPane.leftAnchor="219.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="340.0" text="Blood type:" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="340.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="419.0" layoutY="124.0" text="Last Name:" AnchorPane.leftAnchor="419.0" AnchorPane.topAnchor="124.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="175.0" text="Mobile number:" AnchorPane.leftAnchor="417.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="226.0" text="Gender:" AnchorPane.leftAnchor="417.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FirstNameTextField" layoutX="220.0" layoutY="142.0" promptText="James" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="142.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <TextField fx:id="LastNameTextField" layoutX="220.0" layoutY="192.0" promptText="someone@email.com">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <TextField fx:id="DOBTextField" layoutX="220.0" layoutY="296.0" prefHeight="38.0" prefWidth="148.0" promptText="6 Oak Street, Parramatta 2150">
+         <font>
+            <Font size="10.0" />
+         </font></TextField>
+      <TextField fx:id="GenderTextField" layoutX="221.0" layoutY="359.0" promptText="A+" AnchorPane.leftAnchor="221.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <TextField fx:id="MobileNumberTextField" layoutX="417.0" layoutY="142.0" promptText="Smith" AnchorPane.leftAnchor="417.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <TextField fx:id="AddressTextField" layoutX="417.0" layoutY="244.0" promptText="M" AnchorPane.leftAnchor="417.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <Label layoutX="417.0" layoutY="278.0" text="Notes:" AnchorPane.leftAnchor="417.0" AnchorPane.topAnchor="278.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="GenderTextField1" layoutX="417.0" layoutY="296.0" prefHeight="89.0" prefWidth="148.0" promptText="Peanut Allergy" AnchorPane.leftAnchor="417.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <ListView layoutX="13.0" layoutY="120.0" prefHeight="190.0" prefWidth="189.0" />
+      <Button layoutX="110.0" layoutY="321.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Create New Donor" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Button layoutX="14.0" layoutY="321.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" text="Edit Details">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Label layoutX="13.0" layoutY="80.0" prefHeight="27.0" prefWidth="517.0" text="Select donor from list to view details OR Enter new donor details to create new donor ">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Label layoutX="219.0" layoutY="226.0" text="Date of Birth:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FirstNameTextField2" layoutX="220.0" layoutY="244.0" promptText="01/01/2001">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <Pane layoutX="-15.0" prefHeight="70.0" prefWidth="615.0" style="-fx-background-color: #FF4848#FF4848 #FF4848#FF4848;">
+         <children>
+            <Label layoutX="152.0" layoutY="6.0" prefHeight="59.0" prefWidth="345.0" text="First Name, Last Name" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="555.0" layoutY="25.0" mnemonicParsing="false" text="Home">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TextField fx:id="MobileNumberTextField1" layoutX="417.0" layoutY="192.0" promptText="0412 345 678">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
