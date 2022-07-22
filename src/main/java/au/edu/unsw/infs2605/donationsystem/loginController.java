@@ -26,8 +26,8 @@ public class loginController {
     private Button login;
 
     @FXML
-    private void switchToHomePage(ActionEvent event) throws IOException {
-        App.setRoot("homepage");
+    private void switchToHomePage() throws IOException {
+        App.setRoot("MainPage");
     }
     
 }

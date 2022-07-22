@@ -15,10 +15,18 @@ public class App extends Application {
     
     private static Scene scene;
 
-    @Override
+//    @Override
+//    public void start(Stage stage) throws IOException {
+//        stage.setTitle("Donation Management System");
+//        Scene scene = new Scene(loadFXML("LoginScreen"), 1024, 768);
+//        stage.setScene(scene);
+//        stage.show();
+//    }
+    
+     @Override
     public void start(Stage stage) throws IOException {
         stage.setTitle("Donation Management System");
-        Scene scene = new Scene(loadFXML("app"), 1024, 768);
+        scene = new Scene(loadFXML("LoginScreen"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
