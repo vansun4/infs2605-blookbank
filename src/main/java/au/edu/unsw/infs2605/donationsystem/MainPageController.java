@@ -12,8 +12,7 @@ import javafx.scene.control.Button;
  *
  * @author vanessa
  */
-public class homePageController {
-    
+public class MainPageController {
     @FXML 
     private Button DonationAppt;
     
@@ -25,12 +24,11 @@ public class homePageController {
     
     @FXML
     private void switchToDonorDetails() throws IOException {
-        App.setRoot("donorDetails");
+        App.setRoot("AccessMyDonationDetails");
     }
     
     @FXML
     private void switchToCreateNewAppt() throws IOException {
-        App.setRoot("createNewAppt");
+        App.setRoot("MakeANewAppointment");
     }
-    
 }
