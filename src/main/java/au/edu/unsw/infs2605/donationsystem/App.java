@@ -14,14 +14,6 @@ import java.io.IOException;
 public class App extends Application {
     
     private static Scene scene;
-
-//    @Override
-//    public void start(Stage stage) throws IOException {
-//        stage.setTitle("Donation Management System");
-//        Scene scene = new Scene(loadFXML("LoginScreen"), 1024, 768);
-//        stage.setScene(scene);
-//        stage.show();
-//    }
     
      @Override
     public void start(Stage stage) throws IOException {
