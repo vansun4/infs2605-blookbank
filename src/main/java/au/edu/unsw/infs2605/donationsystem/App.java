@@ -1,10 +1,12 @@
 package au.edu.unsw.infs2605.donationsystem;
 
+import au.edu.unsw.infs2605.donationsystem.database.donorDatabase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.sql.SQLException;
 
 import java.io.IOException;
 
@@ -14,9 +16,11 @@ import java.io.IOException;
 public class App extends Application {
     
     private static Scene scene;
+    private donorDatabase database = new donorDatabase();
     
      @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, SQLException {
+        database.setUpDatabase();
         stage.setTitle("Donation Management System");
         scene = new Scene(loadFXML("LoginScreen"), 640, 480);
         stage.setScene(scene);
