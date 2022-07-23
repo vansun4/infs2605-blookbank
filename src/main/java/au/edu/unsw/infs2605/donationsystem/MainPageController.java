@@ -28,7 +28,7 @@ public class MainPageController {
     }
     
     @FXML
-    private void switchToCreateNewAppt() throws IOException {
-        App.setRoot("MakeANewAppointment");
+    private void switchToMyDonationAppointment() throws IOException {
+        App.setRoot("MyDonationAppointments");
     }
 }

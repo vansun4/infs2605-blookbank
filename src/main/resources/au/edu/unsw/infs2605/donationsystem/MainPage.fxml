@@ -13,19 +13,19 @@
             <Pane layoutX="34.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: #FCD5B0#FCD5B0 #FCD5B0#FCD5B0;">
                <children>
                   <Label layoutX="21.0" layoutY="37.0" prefHeight="114.0" prefWidth="124.0" text="My Donation Appointments" textAlignment="CENTER" wrapText="true" />
-                  <Button layoutX="61.0" layoutY="124.0" mnemonicParsing="false" text="Here" />
+                  <Button fx:id="DonationAppt" layoutX="61.0" layoutY="124.0" mnemonicParsing="false" onAction="#switchToMyDonationAppointment" text="Here" />
                </children>
             </Pane>
             <Pane layoutX="453.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: #FCD5B0#FCD5B0 #FCD5B0#FCD5B0;">
                <children>
                   <Label layoutX="32.0" layoutY="35.0" prefHeight="117.0" prefWidth="103.0" text="Access My Donation Details" textAlignment="CENTER" wrapText="true" />
-                  <Button layoutX="60.0" layoutY="123.0" mnemonicParsing="false" text="Here" />
+                  <Button fx:id="DonorDetails" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#switchToDonorDetails" text="Here" />
                </children>
             </Pane>
             <Pane layoutX="239.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: #FCD5B0#FCD5B0 #FCD5B0#FCD5B0;">
                <children>
-                  <Button layoutX="62.0" layoutY="123.0" mnemonicParsing="false" text="Here" />
                   <Label layoutX="21.0" layoutY="36.0" prefHeight="114.0" prefWidth="121.0" text="Make a New Appointment" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="Appt" layoutX="62.0" layoutY="123.0" mnemonicParsing="false" text="Here" />
                </children>
             </Pane>
             <Label layoutX="259.0" layoutY="95.0" prefHeight="35.0" prefWidth="65.0" text="Welcome," textAlignment="CENTER" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="95.0">

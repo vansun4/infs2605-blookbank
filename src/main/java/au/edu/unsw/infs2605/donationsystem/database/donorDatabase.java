@@ -47,8 +47,8 @@ public class donorDatabase {
         //Needs to contain donation type, donor centre, date, time
         String defineQuery = "CREATE TABLE IF NOT EXISTS Donations"
                 + "(ID INTEGER PRIMARY KEY autoincrement, "
-                + "DONATION_TYPE TEXT NOT NULL, "
-                + "DONOR_CENTRE TEXT NOT NULL, "
+                + "TYPE TEXT NOT NULL, "
+                + "CENTRE TEXT NOT NULL, "
                 + "DATE TEXT NOT NULL, "
                 + "TIME TEXT NOT NULL "
                 + ");";
@@ -73,7 +73,7 @@ public class donorDatabase {
         
         //create query to insert data for donation
         PreparedStatement pSt = conn.prepareStatement (
-            "INSERT OR IGNORE INTO Donations (id, donation_type, donor_centre, date, time) VALUES (?,?,?,?,?)"
+            "INSERT OR IGNORE INTO Donations (id, type, centre, date, time) VALUES (?,?,?,?,?)"
         );
         
         //data to be inserted
@@ -125,15 +125,15 @@ public class donorDatabase {
         //Get ResultSet of all donation data exisitng in the databasw
         Connection conn = DriverManager.getConnection(database);
         Statement st = conn.createStatement();
-        String query = "SELECT id, donation_type, donor_centre, date, time FROM Donations";
+        String query = "SELECT id, type, centre, date, time FROM Donations";
         ResultSet rs = st.executeQuery(query);
         
         ObservableList<donationsData> donationList = FXCollections.observableArrayList();
         
         //add each row in resultset to donationlist 
         while(rs.next()) {
-            donationList.add(new donationsData(rs.getInt("id"), rs.getString("donation_type"), 
-                rs.getString("donor_centre"), rs.getString("date"), rs.getString("time")));
+            donationList.add(new donationsData(rs.getInt("id"), rs.getString("type"), 
+                rs.getString("centre"), rs.getString("date"), rs.getString("time")));
         }
         
         //close connection

@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.makeAppointmentController">
    <children>
       <Pane layoutX="33.0" layoutY="190.0" prefHeight="78.0" prefWidth="260.0" style="-fx-background-color: #FCD5B0#FCD5B0;">
          <children>
@@ -42,12 +41,12 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <TableView layoutX="33.0" layoutY="79.0" opacity="0.89" prefHeight="103.0" prefWidth="469.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
+      <TableView fx:id="donationsTbl" layoutX="33.0" layoutY="79.0" opacity="0.89" prefHeight="103.0" prefWidth="469.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
         <columns>
-          <TableColumn prefWidth="128.0" text="Donation Type " />
-          <TableColumn prefWidth="130.0" text="Donor Centre" />
-            <TableColumn prefWidth="130.0" text="Date" />
-            <TableColumn prefWidth="103.0" text="Time" />
+          <TableColumn fx:id="donationTypeCol" prefWidth="128.0" text="Donation Type " />
+          <TableColumn fx:id="donorCentreCol" prefWidth="130.0" text="Donor Centre" />
+            <TableColumn fx:id="dateCol" prefWidth="130.0" text="Date" />
+            <TableColumn fx:id="timeCol" prefWidth="103.0" text="Time" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
