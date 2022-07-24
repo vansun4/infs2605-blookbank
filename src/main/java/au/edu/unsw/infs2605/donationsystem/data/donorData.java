@@ -51,9 +51,18 @@ public class donorData {
         return emailAddress;
     }
     
+    public int getMobileNumber() {
+        return mobileNumber;
+    }
+    
     public String getBloodType() {
         return bloodType;
     }
+    
+    public String getAddress() {
+        return address;
+    }
+    
     public String getGender() {
         return gender;
     }
@@ -79,8 +88,17 @@ public class donorData {
         this.emailAddress = emailAddress;
     }
     
+    public void setMobileNumber(int mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+    
     public void setbloodType(String bloodType) {
         this.bloodType = bloodType;
+    }
+    
+    
+    public void setAddress(String address) {
+        this.address = address;
     }
     
     public void setGender(String gender) {
