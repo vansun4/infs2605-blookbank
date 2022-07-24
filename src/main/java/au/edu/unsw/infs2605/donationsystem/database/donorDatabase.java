@@ -23,7 +23,7 @@ public class donorDatabase {
     
     //set up the database
     public void setUpDatabase() throws SQLException {
-        //connext to the database
+        //connect to the database
         Connection conn = DriverManager.getConnection(database);
         
         //create a user table for the blood donors
@@ -77,16 +77,16 @@ public class donorDatabase {
         );
         
         //data to be inserted
-        String[] donationType = {"plasma", "blood", "platelets", "blood"};
-        String[] donorCentre = {"Randwick Blood", "Campsie Health", "Chatswood Plus", "Epping Health"};
+        String[] type = {"plasma", "blood", "platelets", "blood"};
+        String[] centre = {"Randwick Blood", "Campsie Health", "Chatswood Plus", "Epping Health"};
         String[] date = {"12/2/2012", "31/5/2009", "23/1/2019", "20/6/2022"};
         String[] time = {"12:00PM", "04:30PM", "02:00PM", "09:00AM"};
         
         //loop the insert the data
         for (int i = 0; i < 4; i++) {
             pSt.setInt(1, i);
-            pSt.setString(2, donationType[i]);
-            pSt.setString(3, donorCentre[i]);
+            pSt.setString(2, type[i]);
+            pSt.setString(3, centre[i]);
             pSt.setString(4, date[i]);
             pSt.setString(5, time[i]);
             pSt.executeUpdate();

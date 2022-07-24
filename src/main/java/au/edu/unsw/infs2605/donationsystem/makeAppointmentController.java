@@ -4,6 +4,7 @@
  */
 package au.edu.unsw.infs2605.donationsystem;
 
+
 import au.edu.unsw.infs2605.donationsystem.data.donationsData;
 import au.edu.unsw.infs2605.donationsystem.database.donorDatabase;
 import java.sql.SQLException;
@@ -44,13 +45,10 @@ public class makeAppointmentController {
         donationsTbl.setItems(donations);
         
         //set all the columns into tableview columns
-        donationTypeCol.setCellValueFactory(new PropertyValueFactory<>("type"));
-        donorCentreCol.setCellValueFactory(new PropertyValueFactory<>("centre"));
+        donationTypeCol.setCellValueFactory(new PropertyValueFactory<>("donationType"));
+        donorCentreCol.setCellValueFactory(new PropertyValueFactory<>("donorCentre"));
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
         timeCol.setCellValueFactory(new PropertyValueFactory<>("time"));
-        
-        
-        
     }
         
     

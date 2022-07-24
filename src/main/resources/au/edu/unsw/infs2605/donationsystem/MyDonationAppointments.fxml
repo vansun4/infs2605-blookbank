@@ -45,12 +45,12 @@
         <columns>
           <TableColumn fx:id="donationTypeCol" prefWidth="128.0" text="Donation Type " />
           <TableColumn fx:id="donorCentreCol" prefWidth="130.0" text="Donor Centre" />
-            <TableColumn fx:id="dateCol" prefWidth="130.0" text="Date" />
-            <TableColumn fx:id="timeCol" prefWidth="103.0" text="Time" />
+          <TableColumn fx:id="dateCol" prefWidth="130.0" text="Date" />
+          <TableColumn fx:id="timeCol" prefWidth="103.0" text="Time" />
         </columns>
-         <columnResizePolicy>
+<!--         <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
+         </columnResizePolicy>-->
       </TableView>
       <Pane layoutX="306.0" layoutY="190.0" prefHeight="78.0" prefWidth="260.0" style="-fx-background-color: #FCD5B0#FCD5B0;">
          <children>
