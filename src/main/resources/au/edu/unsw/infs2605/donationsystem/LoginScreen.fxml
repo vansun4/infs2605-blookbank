@@ -144,7 +144,7 @@
                               <Font size="9.0" />
                            </font>
                         </Label>
-                        <PasswordField fx:id="passwordField" layoutX="22.0" layoutY="179.0" prefHeight="25.0" prefWidth="217.0" />
+                        <PasswordField fx:id="passwordTextField" layoutX="22.0" layoutY="179.0" prefHeight="25.0" prefWidth="217.0" />
                         <Label fx:id="errorMessage" layoutX="76.0" layoutY="286.0" />
                      </children>
                   </Pane>

@@ -25,7 +25,7 @@ public class loginController {
     private TextField emailTextField;
     
     @FXML 
-    private PasswordField passwordField;
+    private PasswordField passwordTextField;
     
     @FXML
     private Label errorMessage;
@@ -38,7 +38,7 @@ public class loginController {
     private void handleLoginButtonFunction(ActionEvent event) throws IOException, SQLException {
         System.out.println("attempted login");
         
-        boolean validateLogin = database.login(emailTextField.getText(), passwordField.getText());
+        boolean validateLogin = database.login(emailTextField.getText(), passwordTextField.getText());
         if (validateLogin) {
             switchToHomePage();
         } else {
