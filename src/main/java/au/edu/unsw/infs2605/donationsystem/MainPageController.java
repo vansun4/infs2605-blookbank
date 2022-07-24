@@ -23,6 +23,9 @@ public class MainPageController {
     private Button DonorDetails;
     
     @FXML
+    private Button logOut;
+    
+    @FXML
     private void switchToDonorDetails() throws IOException {
         App.setRoot("AccessMyDonationDetails");
     }
@@ -30,5 +33,15 @@ public class MainPageController {
     @FXML
     private void switchToMyDonationAppointment() throws IOException {
         App.setRoot("MyDonationAppointments");
+    }
+    
+    @FXML
+    private void switchToNewAppointment() throws IOException {
+        App.setRoot("MakeANewAppointment");
+    }
+    
+    @FXML
+    private void switchToLogin() throws IOException {
+        App.setRoot("LoginScreen");
     }
 }
