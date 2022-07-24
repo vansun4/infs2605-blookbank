@@ -10,5 +10,7 @@ module au.edu.unsw.infs2605.donationsystem {
     requires java.sql;
 
     opens au.edu.unsw.infs2605.donationsystem to javafx.fxml;
+    opens au.edu.unsw.infs2605.donationsystem.data to javafx.fxml;
     exports au.edu.unsw.infs2605.donationsystem;
+    exports au.edu.unsw.infs2605.donationsystem.data;
 }

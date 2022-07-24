@@ -11,11 +11,11 @@ package au.edu.unsw.infs2605.donationsystem.data;
 public class donationsData {
     
     //attributes
-    private int id;
-    private String donationType;
-    private String donorCentre; 
-    private String date;
-    private String time;
+    protected int id;
+    protected String donationType;
+    protected String donorCentre; 
+    protected String date;
+    protected String time;
     
     //constructor
     public donationsData(int id, String donationType, String donorCentre, String date, String time) {
