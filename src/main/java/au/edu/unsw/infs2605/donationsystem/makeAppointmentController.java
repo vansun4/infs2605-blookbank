@@ -52,6 +52,10 @@ public class makeAppointmentController {
     }
         
     
+    //notes 
+    //pass data: export data into module-info
+    //https://stackoverflow.com/questions/67372505/java-lang-illegalaccessexception-module-javafx-base-cannot-access-class-sample 
+    
     
     
 }

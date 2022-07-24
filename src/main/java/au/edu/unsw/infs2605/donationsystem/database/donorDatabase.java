@@ -20,6 +20,11 @@ import javafx.collections.ObservableList;
  */
 public class donorDatabase {
     final private String database = "jdbc:sqlite:DonorBank.db";
+    //notes
+    
+    //set up database
+    //https://cornercase.info/solve-java-package-java-sql-is-not-visible-maven-intellij/
+    
     
     //set up the database
     public void setUpDatabase() throws SQLException {
@@ -38,7 +43,7 @@ public class donorDatabase {
         
         //insert user accounts to test 
         String insertUserAccount = "INSERT INTO Users (ID, USERNAME, PASSWORD)"
-                + "VALUES (1, 'stellarush', 'starlight');";
+                + "VALUES (1, 'stellar', 'starlight');";
         
         //execute statement
         st.execute(insertUserAccount);
