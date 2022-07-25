@@ -107,7 +107,7 @@
                               <Font name="System Bold" size="10.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="emailTextField" layoutX="367.0" layoutY="208.0" prefHeight="39.0" prefWidth="217.0">
+                        <TextField fx:id="emailTextField" layoutX="371.0" layoutY="208.0" prefHeight="39.0" prefWidth="217.0">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -132,7 +132,7 @@
                               <Font size="9.0" />
                            </font>
                         </Label>
-                        <Button fx:id="login" layoutX="313.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleLoginButtonFunction" prefHeight="31.0" prefWidth="274.0" style="-fx-background-color: #FF4848#FF4848;" text="Login" textFill="WHITE">
+                        <Button fx:id="loginButton" layoutX="313.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleLoginButtonFunction" prefHeight="31.0" prefWidth="274.0" style="-fx-background-color: #FF4848#FF4848;" text="Login" textFill="WHITE">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -147,7 +147,7 @@
                               <Font size="9.0" />
                            </font>
                         </Label>
-                        <PasswordField fx:id="passwordField" layoutX="374.0" layoutY="295.0" prefHeight="39.0" prefWidth="217.0" />
+                        <PasswordField fx:id="passwordField" layoutX="371.0" layoutY="297.0" prefHeight="39.0" prefWidth="217.0" />
                         <Label fx:id="errorMessage" layoutX="374.0" layoutY="407.0" prefHeight="17.0" prefWidth="284.0" />
                         <ImageView fitHeight="335.0" fitWidth="345.0" layoutX="295.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
                            <image>

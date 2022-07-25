@@ -7,6 +7,7 @@ package au.edu.unsw.infs2605.donationsystem;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 /**
  *
@@ -14,16 +15,19 @@ import javafx.scene.control.Button;
  */
 public class MainPageController {
     @FXML 
-    private Button DonationAppt;
+    private Button donationApptButton;
     
     @FXML
-    private Button Appt; 
+    private Button newApptButton; 
     
     @FXML
-    private Button DonorDetails;
+    private Button donorDetailsButton;
     
     @FXML
-    private Button logOut;
+    private Button logOutButton;
+    
+    @FXML
+    private Label firstName;
     
     @FXML
     private void switchToDonorDetails() throws IOException {
