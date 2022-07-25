@@ -154,7 +154,6 @@
                               <Image url="@../../../../../blood%20pic%202.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="test" layoutX="161.0" layoutY="310.0" mnemonicParsing="false" onAction="#testAction" text="Button" />
                      </children>
                   </Pane>
                   <ImageView fitHeight="46.0" fitWidth="54.0" layoutX="291.0" layoutY="1.0">
