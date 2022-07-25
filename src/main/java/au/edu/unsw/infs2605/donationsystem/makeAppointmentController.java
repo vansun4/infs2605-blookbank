@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,16 +26,16 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 public class makeAppointmentController {
     @FXML 
-    private Button newDonorCentre;
+    private Button newDonorCentreButton;
     
     @FXML 
-    private Button mainPage;
+    private Button mainPageButton;
     
     @FXML
-    private Button clearInput;
+    private Button clearInputButton;
     
     @FXML
-    private Button confirmBooking;
+    private Button confirmBookingButton;
     
     @FXML
     private ChoiceBox donationTypeChoice;
@@ -80,7 +81,25 @@ public class makeAppointmentController {
         donorCentreCol.setCellValueFactory(new PropertyValueFactory<>("donorCentre"));
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
         timeCol.setCellValueFactory(new PropertyValueFactory<>("time"));
-   
+        
+        //sets list of options
+        ObservableList<String> donorTypeList = FXCollections.observableArrayList("Blood","Plasma","Platelet");
+        ObservableList<String> donorCentreList = FXCollections.observableArrayList("");
+        ObservableList<String> apptTimeList = FXCollections.observableArrayList("7:00AM","7:30AM","8:00AM","8:30AM","9:00AM"
+                                            ,"9:30AM","10:00AM","10:30AM","11:00AM","11:30AM","12:00PM","12:30PM","1:00PM"
+                                            ,"1:30PM","2:00PM","2:30PM","3:00PM","3:30PM","4:00PM","4:30PM","5:00PM"
+                                            ,"5:30PM","6:00PM","6:30PM","7:00PM","7:30PM","8:00PM");
+    
+        //sets list of options into choice boxes
+        donationTypeChoice.setItems(donorTypeList);
+        donationTypeChoice.setValue("");
+        
+        donationCentreChoice.setItems(donorCentreList);
+        donationCentreChoice.setValue("");    
+        
+        apptTimeChoice.setItems(apptTimeList);
+        apptTimeChoice.setValue("");  
+        
     }
     
     //gets value from the appt date picker

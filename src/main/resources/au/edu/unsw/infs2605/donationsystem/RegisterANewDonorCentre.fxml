@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.registerNewDonorCentreController">
    <children>
-      <TextField fx:id="MobileNumberTextField" layoutX="22.0" layoutY="129.0" prefHeight="49.0" prefWidth="272.0" promptText="e.g; Kensington Blood Centre" AnchorPane.leftAnchor="22.0">
+      <TextField fx:id="centreTextField" layoutX="22.0" layoutY="129.0" prefHeight="49.0" prefWidth="272.0" promptText="e.g; Kensington Blood Centre" AnchorPane.leftAnchor="22.0">
          <font>
             <Font size="12.0" />
          </font>
       </TextField>
-      <Button layoutX="165.0" layoutY="359.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Register Donor Centre" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="registerCentreButton" layoutX="165.0" layoutY="359.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Register Donor Centre" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="11.0" />
          </font>
       </Button>
-      <Button layoutX="66.0" layoutY="359.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" text="Clear Input">
+      <Button fx:id="clearInputButton" layoutX="66.0" layoutY="359.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" text="Clear Input">
          <font>
             <Font size="11.0" />
          </font>
@@ -31,7 +31,7 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <Button layoutX="1522.0" layoutY="24.0" mnemonicParsing="false" text="Back">
+            <Button fx:id="backButton" layoutX="1522.0" layoutY="24.0" mnemonicParsing="false" text="Back">
                <font>
                   <Font size="11.0" />
                </font>
@@ -48,7 +48,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="MobileNumberTextField1" layoutX="23.0" layoutY="217.0" prefHeight="49.0" prefWidth="272.0" promptText="e.g; 1 Crane Road, Surry Hills 2150">
+      <TextField fx:id="centreAddressTextField" layoutX="23.0" layoutY="217.0" prefHeight="49.0" prefWidth="272.0" promptText="e.g; 1 Crane Road, Surry Hills 2150">
          <font>
             <Font size="12.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="MobileNumberTextField11" layoutX="23.0" layoutY="320.0" prefHeight="28.0" prefWidth="272.0" promptText="e.g; 0412 345 678">
+      <TextField fx:id="centreNumberTextField" layoutX="23.0" layoutY="320.0" prefHeight="28.0" prefWidth="272.0" promptText="e.g; 0412 345 678">
          <font>
             <Font size="12.0" />
          </font>

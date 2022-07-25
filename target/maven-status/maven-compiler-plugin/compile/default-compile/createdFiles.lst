@@ -1,10 +1,13 @@
 au/edu/unsw/infs2605/donationsystem/data/donorData.class
 au/edu/unsw/infs2605/donationsystem/images/images.class
 au/edu/unsw/infs2605/donationsystem/loginController.class
+au/edu/unsw/infs2605/donationsystem/registerNewDonorCentreController.class
 au/edu/unsw/infs2605/donationsystem/images/images$1.class
 au/edu/unsw/infs2605/donationsystem/data/donationsData.class
 au/edu/unsw/infs2605/donationsystem/MainPageController.class
 au/edu/unsw/infs2605/donationsystem/makeAppointmentController.class
 module-info.class
+au/edu/unsw/infs2605/donationsystem/accessMyDonationsController.class
 au/edu/unsw/infs2605/donationsystem/database/donorDatabase.class
+au/edu/unsw/infs2605/donationsystem/myDonationAppointmentController.class
 au/edu/unsw/infs2605/donationsystem/App.class
