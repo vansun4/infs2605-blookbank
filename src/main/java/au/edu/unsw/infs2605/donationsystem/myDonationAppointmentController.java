@@ -60,7 +60,6 @@ public class myDonationAppointmentController {
     
     String apptDateString;
     
-    
     //table view for the data 
     donorDatabase database = new donorDatabase();
     
