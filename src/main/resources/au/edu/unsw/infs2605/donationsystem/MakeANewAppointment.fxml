@@ -64,14 +64,14 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <Button fx:id="mainPageButton" layoutX="550.0" layoutY="19.0" mnemonicParsing="false" text="Home">
+            <Button fx:id="homeButton" layoutX="550.0" layoutY="19.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Home">
                <font>
                   <Font size="11.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Button fx:id="newDonorCentreButton" layoutX="82.0" layoutY="211.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="154.0" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="newDonorCentreButton" layoutX="82.0" layoutY="211.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="79.0" prefWidth="154.0" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="11.0" />
          </font>

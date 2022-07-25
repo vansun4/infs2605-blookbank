@@ -38,6 +38,12 @@ public class loginController {
     @FXML
     private Button loginButton;
     
+    @FXML
+    private Button test1;
+    
+    @FXML
+    private Button test2;
+    
     //method to login into the program
     @FXML
     private void handleLoginButtonFunction(ActionEvent event) throws IOException, SQLException {
@@ -57,4 +63,13 @@ public class loginController {
         App.setRoot("MainPage");
     }
     
+    @FXML
+    private void test1action() throws IOException {
+        App.setRoot("MakeANewAppointment");
+    } 
+    
+    @FXML
+    private void test2action() throws IOException {
+        App.setRoot("MyDonationAppointments");
+    }
 }
