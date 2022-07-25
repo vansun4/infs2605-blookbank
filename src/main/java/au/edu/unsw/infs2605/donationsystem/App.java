@@ -22,7 +22,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException, SQLException {
         database.setUpDatabase();
         stage.setTitle("Donation Management System");
-        scene = new Scene(loadFXML("LoginScreen"), 1600, 900);
+        scene = new Scene(loadFXML("LoginScreen"), 1080, 600);
         stage.setScene(scene);
         stage.show();
     }

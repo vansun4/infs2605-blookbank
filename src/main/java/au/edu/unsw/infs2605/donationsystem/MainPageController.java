@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
  * @author vanessa
  */
 public class MainPageController {
+    //fxids
     @FXML 
     private Button donationApptButton;
     
@@ -29,21 +30,26 @@ public class MainPageController {
     @FXML
     private Label firstName;
     
+    //switch screen to access the donor's details
+    
     @FXML
     private void switchToDonorDetails() throws IOException {
         App.setRoot("AccessMyDonationDetails");
     }
     
+    //switch screen to access the list of donation appointments made
     @FXML
     private void switchToMyDonationAppointment() throws IOException {
         App.setRoot("MyDonationAppointments");
     }
     
+    //switch screen to create a new appointment
     @FXML
     private void switchToNewAppointment() throws IOException {
         App.setRoot("MakeANewAppointment");
     }
     
+    //switch screen to logout
     @FXML
     private void switchToLogin() throws IOException {
         App.setRoot("LoginScreen");

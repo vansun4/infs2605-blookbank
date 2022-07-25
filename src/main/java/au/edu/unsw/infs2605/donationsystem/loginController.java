@@ -24,8 +24,10 @@ import javafx.stage.Stage;
  * @author vanessa
  */
 public class loginController {
+    //access the database
     donorDatabase database = new donorDatabase();
     
+    //fxids
     @FXML 
     private TextField emailTextField;
     
@@ -62,6 +64,10 @@ public class loginController {
     private void switchToHomePage() throws IOException {
         App.setRoot("MainPage");
     }
+    
+    
+    
+    
     
     @FXML
     private void test1action() throws IOException {

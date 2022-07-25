@@ -25,6 +25,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  * @author vanessa
  */
 public class makeAppointmentController {
+    //fxids
     @FXML 
     private Button homeButton;
     
@@ -49,11 +50,14 @@ public class makeAppointmentController {
     @FXML
     private DatePicker apptDatePicker;
     
+    
+    //switch scene back to the main page
     @FXML
     private void switchToMainPage() throws IOException {
         App.setRoot("MainPage");
     }
     
+    //
     @FXML
     private void switchToNewDonorCentre() throws IOException {
         App.setRoot("RegisterANewDonorCentre");
