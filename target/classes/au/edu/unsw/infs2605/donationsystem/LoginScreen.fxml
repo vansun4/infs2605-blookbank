@@ -12,18 +12,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.loginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.loginController">
    <children>
-      <SplitPane dividerPositions="0.41555183946488294" prefHeight="900.0" prefWidth="1600.0">
+      <SplitPane dividerPositions="0.41555183946488294" prefHeight="772.0" prefWidth="1367.0">
          <items>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1600.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="806.0" prefWidth="651.0">
                <children>
                   <ImageView fitHeight="411.0" fitWidth="503.0" layoutX="-171.0" layoutY="-13.0" opacity="0.37">
                      <image>
                         <Image url="@../../../../../../../../../../../Desktop/blood-donation.jpeg" />
                      </image>
                   </ImageView>
-                  <Pane layoutX="41.0" layoutY="40.0" opacity="0.87" prefHeight="208.0" prefWidth="600.0" style="-fx-background-color: white;">
+                  <Pane layoutX="8.0" layoutY="37.0" opacity="0.87" prefHeight="189.0" prefWidth="540.0" style="-fx-background-color: white;">
                      <children>
                         <Label layoutX="153.0" layoutY="11.0" text="Donate Blood" textFill="#e40707">
                            <font>
@@ -42,7 +42,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="41.0" layoutY="294.0" opacity="0.87" prefHeight="574.0" prefWidth="600.0" style="-fx-background-color: white;">
+                  <Pane layoutX="27.0" layoutY="275.0" opacity="0.87" prefHeight="451.0" prefWidth="503.0" style="-fx-background-color: white;">
                      <children>
                         <Label layoutX="110.0" layoutY="15.0" text="Why create an account?" textFill="#e40707">
                            <font>
@@ -93,11 +93,11 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #FAE7E7#FAE7E7;">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="596.0" prefWidth="671.0" style="-fx-background-color: #FAE7E7#FAE7E7;">
                <children>
-                  <Pane layoutX="41.0" layoutY="51.0" opacity="0.85" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: WHITE;">
+                  <Pane layoutX="65.0" layoutY="39.0" opacity="0.85" prefHeight="705.0" prefWidth="681.0" style="-fx-background-color: WHITE;">
                      <children>
-                        <Label layoutX="313.0" layoutY="33.0" text="Donor Login">
+                        <Label layoutX="202.0" layoutY="31.0" text="Donor Login">
                            <font>
                               <Font name="System Bold" size="60.0" />
                            </font>
@@ -149,7 +149,7 @@
                         </Label>
                         <PasswordField fx:id="passwordField" layoutX="371.0" layoutY="297.0" prefHeight="39.0" prefWidth="217.0" />
                         <Label fx:id="errorMessage" layoutX="374.0" layoutY="407.0" prefHeight="17.0" prefWidth="284.0" />
-                        <ImageView fitHeight="335.0" fitWidth="345.0" layoutX="295.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="227.0" fitWidth="284.0" layoutX="249.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../blood%20pic%202.png" />
                            </image>
