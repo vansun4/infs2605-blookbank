@@ -1,5 +1,6 @@
 package au.edu.unsw.infs2605.donationsystem;
 
+import au.edu.unsw.infs2605.donationsystem.data.donationsData;
 import au.edu.unsw.infs2605.donationsystem.database.donorDatabase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,8 @@ import javafx.stage.Stage;
 import java.sql.SQLException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * JavaFX App
@@ -16,7 +19,10 @@ import java.io.IOException;
 public class App extends Application {
     
     private static Scene scene;
+    
     private donorDatabase database = new donorDatabase();
+    
+    private static List<donationsData> donationsRecords = new ArrayList<donationsData>();
     
      @Override
     public void start(Stage stage) throws IOException, SQLException {
@@ -38,6 +44,14 @@ public class App extends Application {
 
     public static void main(String[] args) {
         Application.launch(args);
+    }
+    
+    public static List<donationsData> getDonationsRecords() {
+        return donationsRecords;
+    }
+    
+    public static void setDonationsRecords(List<donationsData> donationsRecords) {
+        App.donationsRecords = donationsRecords;
     }
 
 }

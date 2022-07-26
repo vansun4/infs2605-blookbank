@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -17,16 +18,21 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 /**
  *
  * @author vanessa
  */
 public class myDonationAppointmentController {
+    
+    //fxids
     @FXML 
     private Button homeButton;
     
@@ -64,7 +70,7 @@ public class myDonationAppointmentController {
     donorDatabase database = new donorDatabase();
     
     @FXML
-    private TableView donationsTbl;
+    private TableView<donationsData> donation = new TableView<>();
     
     @FXML 
     TableColumn<donationsData, String> donationTypeCol;
@@ -78,13 +84,15 @@ public class myDonationAppointmentController {
     @FXML
     TableColumn<donationsData, String> timeCol;
     
+    private ListView<donationsData> data;
+    
     @FXML 
     public void initialize() throws SQLException {
         //get list of the donations in the donorDatabase
-        ObservableList<donationsData> donations = database.getData();
+        ObservableList<donationsData> Donations = database.getData();
         
         //set list into tableview
-        donationsTbl.setItems(donations);
+        donation.setItems(Donations);
         
         //set all the columns into tableview columns
         donationTypeCol.setCellValueFactory(new PropertyValueFactory<>("donationType"));
@@ -92,14 +100,19 @@ public class myDonationAppointmentController {
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
         timeCol.setCellValueFactory(new PropertyValueFactory<>("time"));
         
-        //sets list of options
+        //edit tableview data
+        donationTypeCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        //donationTypeCol.setOnEditCommit(getDonationsTbl().getItems());
+        
+        
+        
+        //observable list data
         ObservableList<String> donorTypeList = FXCollections.observableArrayList("Blood","Plasma","Platelet");
         ObservableList<String> donorCentreList = FXCollections.observableArrayList("");
         ObservableList<String> apptTimeList = FXCollections.observableArrayList("7:00AM","7:30AM","8:00AM","8:30AM","9:00AM"
                                             ,"9:30AM","10:00AM","10:30AM","11:00AM","11:30AM","12:00PM","12:30PM","1:00PM"
                                             ,"1:30PM","2:00PM","2:30PM","3:00PM","3:30PM","4:00PM","4:30PM","5:00PM"
                                             ,"5:30PM","6:00PM","6:30PM","7:00PM","7:30PM","8:00PM");
-    
         //sets list of options into choice boxes
         donationTypeChoice.setItems(donorTypeList);
         donationTypeChoice.setValue("");
@@ -109,19 +122,47 @@ public class myDonationAppointmentController {
         
         apptTimeChoice.setItems(apptTimeList);
         apptTimeChoice.setValue("");  
+ 
         
     }
     
-    //gets value from the appt date picker
-    @FXML
-    public void selectApptDatePicker(ActionEvent event){
-        LocalDate apptDate = apptDatePicker.getValue();
-        apptDateString = apptDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    }
-    
+    //return to the main screen 
     @FXML
     private void switchToMainPage() throws IOException {
         App.setRoot("MainPage");
     }
+    
+    //delete the appointment time 
+    @FXML 
+    private void deleteAppointment(ActionEvent event) throws IOException { 
+        //deleting donor centre and associated time slots
+        //https://stackoverflow.com/questions/34857007/how-to-delete-row-from-table-column-javafx
+        donation.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        
+        ObservableList<donationsData> selectedRows = donation.getSelectionModel().getSelectedItems();
+        ArrayList<donationsData> rows = new ArrayList<>(selectedRows);
+        rows.forEach(row -> donation.getItems().remove(row));
+    }
+    
+    //update the appointment time 
+     @FXML
+     public void selectApptDatePicker(ActionEvent event){
+        LocalDate apptDate = apptDatePicker.getValue();
+       apptDateString = apptDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+     }
+    
+    //generate appointment receipt 
+    @FXML
+    private void generateAppointmentReceipt() throws IOException {
+        
+    }
+    
+    //make a new appointment 
+    @FXML
+    private void switchToMakeNewAppointments() throws IOException {
+        App.setRoot("MakeANewAppointment");
+    }
+    
+    
     
 }

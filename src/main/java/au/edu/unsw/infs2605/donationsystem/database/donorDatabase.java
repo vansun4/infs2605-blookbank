@@ -84,7 +84,7 @@ public class donorDatabase {
         //data to be inserted
         String[] type = {"plasma", "blood", "platelets", "blood"};
         String[] centre = {"Randwick Blood", "Campsie Health", "Chatswood Plus", "Epping Health"};
-        String[] date = {"12/2/2012", "31/5/2009", "23/1/2019", "20/6/2022"};
+        String[] date = {"12/02/2012", "31/05/2009", "23/01/2019", "20/06/2022"};
         String[] time = {"12:00PM", "04:30PM", "02:00PM", "09:00AM"};
         
         //loop the insert the data
