@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.myDonationAppointmentController">
    <children>
-      <Button fx:id="updateApptButton" layoutX="80.0" layoutY="680.0" mnemonicParsing="false" style="-fx-background-color: #EDFCDA#EDFCDA;" text="Update my Appointment ">
+      <Button fx:id="updateApptButton" layoutX="80.0" layoutY="680.0" mnemonicParsing="false" onAction="#saveUpdatedRecords" style="-fx-background-color: #EDFCDA#EDFCDA;" text="Update my Appointment ">
          <font>
             <Font size="20.0" />
          </font>
@@ -31,7 +31,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <TableView fx:id="donation" layoutX="33.0" layoutY="93.0" opacity="0.89" prefHeight="179.0" prefWidth="962.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
+      <TableView fx:id="donation" layoutX="33.0" layoutY="93.0" onMouseClicked="#userClickedOnDonations" opacity="0.89" prefHeight="179.0" prefWidth="962.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
         <columns>
           <TableColumn fx:id="donationTypeCol" prefWidth="253.0" text="Donation Type " />
           <TableColumn fx:id="donorCentreCol" prefWidth="308.0" text="Donor Centre" />

@@ -11,14 +11,14 @@ package au.edu.unsw.infs2605.donationsystem.data;
 public class donationsData {
     
     //attributes
-    private int id;
+    private String id;
     private String donationType;
     private String donorCentre; 
     private String date;
     private String time;
     
     //constructor
-    public donationsData(int id, String donationType, String donorCentre, String date, String time) {
+    public donationsData(String id, String donationType, String donorCentre, String date, String time) {
         this.id = id;
         this.donationType = donationType;
         this.donorCentre = donorCentre;
@@ -27,7 +27,7 @@ public class donationsData {
     }
     
     //getters
-    public int getID() {
+    public String getID() {
         return id;
     }
     
@@ -48,7 +48,7 @@ public class donationsData {
     }
     
     //setters
-    public void setID(int id) {
+    public void setID(String id) {
         this.id = id;
     }    
 
@@ -68,6 +68,10 @@ public class donationsData {
         this.time = time;
     }
     
+    @Override
+    public String toString() {
+        return this.donationType + " " + this.donorCentre;
+    }
     
     
 }

@@ -137,7 +137,7 @@ public class donorDatabase {
         
         //add each row in resultset to donationlist 
         while(rs.next()) {
-            donationList.add(new donationsData(rs.getInt("id"), rs.getString("type"), 
+            donationList.add(new donationsData(rs.getString("id"), rs.getString("type"), 
                 rs.getString("centre"), rs.getString("date"), rs.getString("time")));
         }
         
