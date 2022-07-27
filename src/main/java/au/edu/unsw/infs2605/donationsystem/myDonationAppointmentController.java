@@ -192,7 +192,7 @@ public class myDonationAppointmentController {
          }
          
          App.setDonationsRecords(newRecords);
-         App.setRoot("MyDonationAppointment");
+         App.setRoot("MyDonationAppointments");
      }
     
     //generate appointment receipt 

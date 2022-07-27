@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -31,7 +32,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <TableView fx:id="donation" layoutX="33.0" layoutY="93.0" onMouseClicked="#userClickedOnDonations" opacity="0.89" prefHeight="179.0" prefWidth="962.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
+      <TableView fx:id="donation" layoutX="33.0" layoutY="93.0" opacity="0.89" prefHeight="179.0" prefWidth="962.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
         <columns>
           <TableColumn fx:id="donationTypeCol" prefWidth="253.0" text="Donation Type " />
           <TableColumn fx:id="donorCentreCol" prefWidth="308.0" text="Donor Centre" />
@@ -143,5 +144,6 @@
             </HBox>
          </children>
       </VBox>
+      <ListView fx:id="data" layoutX="362.0" layoutY="350.0" onMouseClicked="#userClickedOnDonations" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
