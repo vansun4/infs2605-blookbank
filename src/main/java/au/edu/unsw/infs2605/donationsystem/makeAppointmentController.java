@@ -50,19 +50,6 @@ public class makeAppointmentController {
     @FXML
     private DatePicker apptDatePicker;
     
-    
-    //switch scene back to the main page
-    @FXML
-    private void switchToMainPage() throws IOException {
-        App.setRoot("MainPage");
-    }
-    
-    //
-    @FXML
-    private void switchToNewDonorCentre() throws IOException {
-        App.setRoot("RegisterANewDonorCentre");
-    }
-    
     @FXML 
     public void initialize() throws SQLException {
         //sets list of options
@@ -83,5 +70,23 @@ public class makeAppointmentController {
         apptTimeChoice.setItems(apptTimeList);
         apptTimeChoice.setValue("");
     }
-        
+    
+    //once apppointment is confirmed, switch to the home page 
+    @FXML
+    private void confirmBooking() throws IOException {
+        App.setRoot("MainPage");
+    }
+    
+    //switch scene back to the main page
+    @FXML
+    private void switchToMainPage() throws IOException {
+        App.setRoot("MainPage");
+    }
+    
+    //
+    @FXML
+    private void switchToNewDonorCentre() throws IOException {
+        App.setRoot("RegisterANewDonorCentre");
+    }
+    
 }

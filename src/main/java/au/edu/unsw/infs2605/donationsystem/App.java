@@ -1,5 +1,6 @@
 package au.edu.unsw.infs2605.donationsystem;
 
+import au.edu.unsw.infs2605.donationsystem.data.donationCentreData;
 import au.edu.unsw.infs2605.donationsystem.data.donationsData;
 import au.edu.unsw.infs2605.donationsystem.database.donorDatabase;
 import javafx.application.Application;
@@ -23,6 +24,8 @@ public class App extends Application {
     private donorDatabase database = new donorDatabase();
     
     private static List<donationsData> donationsRecords = new ArrayList<donationsData>();
+    
+    private static List<donationCentreData> centreData = new ArrayList<donationCentreData>();
     
     //records
     
@@ -56,12 +59,22 @@ public class App extends Application {
         Application.launch(args);
     }
     
+    //get and set donation records
     public static List<donationsData> getDonationsRecords() {
         return donationsRecords;
     }
     
     public static void setDonationsRecords(List<donationsData> donationsRecords) {
         App.donationsRecords = donationsRecords;
+    }
+    
+    //get and set centre data
+    public static List<donationCentreData> getDonationsCentre() {
+        return centreData;
+    }
+    
+    public static void setDonationsCentre(List<donationCentreData> centreData) {
+        App.centreData = centreData;
     }
 
 }

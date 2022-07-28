@@ -47,7 +47,7 @@
                   <Font size="11.0" />
                </font>
             </Button>
-            <Button fx:id="confirmBookingButton" layoutX="152.0" layoutY="190.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="123.0" text="Confirm your booking" textAlignment="CENTER" wrapText="true">
+            <Button fx:id="confirmBookingButton" layoutX="152.0" layoutY="190.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="39.0" prefWidth="123.0" text="Confirm your booking" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="11.0" />
                </font>
