@@ -36,6 +36,7 @@ public class registerNewDonorCentreController {
     private TextField centreNumberTextField;
     
     //switch to main when a new donor centre
+    //https://stackoverflow.com/questions/36358044/convert-the-content-of-javafx-textfield-into-integer
     @FXML
     private void saveDataWhenCreated (ActionEvent event) throws IOException {
         List<donationCentreData> centre = App.getDonationsCentre();

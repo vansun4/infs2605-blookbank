@@ -57,6 +57,7 @@ public class donorDatabase {
                 + "DATE TEXT NOT NULL, "
                 + "TIME TEXT NOT NULL "
                 + ");";
+
         
         //execute query
         st.execute(defineQuery);
@@ -78,8 +79,9 @@ public class donorDatabase {
         
         //create query to insert data for donation
         PreparedStatement pSt = conn.prepareStatement (
-            "INSERT OR IGNORE INTO Donations (id, type, centre, date, time) VALUES (?,?,?,?,?)"
+            "INSERT OR IGNORE INTO Donations (id,type, centre, date, time) VALUES (?,?,?,?,?)"
         );
+        
         
         //data to be inserted
         String[] type = {"plasma", "blood", "platelets", "blood"};
