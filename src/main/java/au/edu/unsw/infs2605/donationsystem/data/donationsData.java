@@ -18,7 +18,7 @@ public class donationsData {
     private String time;
     
     //constructor
-    public donationsData(String id, String donationType, String donorCentre, String date, String time) {
+    public donationsData(String id ,String donationType, String donorCentre, String date, String time) {
         this.id = id;
         this.donationType = donationType;
         this.donorCentre = donorCentre;

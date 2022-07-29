@@ -42,7 +42,7 @@ public class donorDatabase {
         st.execute(createQuery);
         
         //insert user accounts to test 
-        String insertUserAccount = "INSERT INTO Users (ID, USERNAME, PASSWORD)"
+        String insertUserAccount = "INSERT OR IGNORE INTO Users (ID, USERNAME, PASSWORD)"
                 + "VALUES (1, 'stellar', 'starlight');";
         
         //execute statement
@@ -57,6 +57,7 @@ public class donorDatabase {
                 + "DATE TEXT NOT NULL, "
                 + "TIME TEXT NOT NULL "
                 + ");";
+
         
         //execute query
         st.execute(defineQuery);
@@ -67,6 +68,18 @@ public class donorDatabase {
         //close connection and statements
         st.close();
         conn.close();
+        
+//        
+//        //delete a table based on a centre 
+//        String deleteQuery = "DELETE FROM Donations WHERE CENTRE = 'Randwick Blood'";
+//        
+//        //execute query
+//        st.execute(deleteQuery);
+//        
+//        //close connection and statements
+//        st.close();
+//        conn.close();
+        
     }
     
     public void insertDonationData() throws SQLException {
@@ -78,8 +91,9 @@ public class donorDatabase {
         
         //create query to insert data for donation
         PreparedStatement pSt = conn.prepareStatement (
-            "INSERT OR IGNORE INTO Donations (id, type, centre, date, time) VALUES (?,?,?,?,?)"
+            "INSERT OR IGNORE INTO Donations (id,type, centre, date, time) VALUES (?,?,?,?,?)"
         );
+        
         
         //data to be inserted
         String[] type = {"plasma", "blood", "platelets", "blood"};

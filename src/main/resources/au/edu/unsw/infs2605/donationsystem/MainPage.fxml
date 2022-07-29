@@ -2,57 +2,108 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.MainPageController">
    <children>
-      <AnchorPane layoutY="-1.0" prefHeight="400.0" prefWidth="649.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
+<<<<<<< HEAD
+      <AnchorPane layoutX="-1.0" layoutY="46.0" prefHeight="725.0" prefWidth="1453.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
+=======
+      <AnchorPane layoutY="-1.0" prefHeight="765.0" prefWidth="1365.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
+>>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
          <children>
-            <Pane layoutX="34.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: #FCD5B0#FCD5B0 #FCD5B0#FCD5B0;">
+            <ImageView fitHeight="774.0" fitWidth="1455.0" layoutX="1.0" layoutY="-49.0" opacity="0.47">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/iStock-627290560smaller-scaled.jpeg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="75.0" layoutY="246.0" prefHeight="303.0" prefWidth="303.0" style="-fx-background-color: #F8EFF1#F8EFF1;">
                <children>
-                  <Label layoutX="21.0" layoutY="37.0" prefHeight="114.0" prefWidth="124.0" text="My Donation Appointments" textAlignment="CENTER" wrapText="true" />
-                  <Button fx:id="donationApptButton" layoutX="61.0" layoutY="124.0" mnemonicParsing="false" onAction="#switchToMyDonationAppointment" text="Here" />
+                  <Label alignment="CENTER" layoutX="46.0" layoutY="65.0" prefHeight="114.0" prefWidth="209.0" text="My Donation Appointments" textAlignment="CENTER" textFill="#f54141" wrapText="true">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Label>
+                  <Button fx:id="donationApptButton" layoutX="101.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToMyDonationAppointment" style="-fx-background-color: #DCAEB7#DCAEB7;" text="Here">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Button>
                </children>
             </Pane>
-            <Pane layoutX="453.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: #FCD5B0#FCD5B0 #FCD5B0#FCD5B0;">
+            <Pane layoutX="1040.0" layoutY="244.0" prefHeight="303.0" prefWidth="303.0" style="-fx-background-color: #F8EFF1#F8EFF1 #F8EFF1#F8EFF1;">
                <children>
-                  <Label layoutX="32.0" layoutY="35.0" prefHeight="117.0" prefWidth="103.0" text="Access My Donation Details" textAlignment="CENTER" wrapText="true" />
-                  <Button fx:id="donorDetailsButton" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#switchToDonorDetails" text="Here" />
+                  <Label layoutX="46.0" layoutY="62.0" prefHeight="117.0" prefWidth="219.0" text="Access My Donation Details" textAlignment="CENTER" textFill="#f54141" wrapText="true">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Label>
+                  <Button fx:id="donorDetailsButton" layoutX="108.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToDonorDetails" style="-fx-background-color: #DCAEB7#DCAEB7 #DCAEB7#DCAEB7;" text="Here">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Button>
                </children>
             </Pane>
-            <Pane layoutX="239.0" layoutY="152.0" prefHeight="169.0" prefWidth="166.0" style="-fx-background-color: #FCD5B0#FCD5B0 #FCD5B0#FCD5B0;">
+            <Pane layoutX="566.0" layoutY="243.0" prefHeight="303.0" prefWidth="303.0" style="-fx-background-color: #F8EFF1#F8EFF1;">
                <children>
-                  <Label layoutX="21.0" layoutY="36.0" prefHeight="114.0" prefWidth="121.0" text="Make a New Appointment" textAlignment="CENTER" wrapText="true" />
-                  <Button fx:id="newApptButton" layoutX="62.0" layoutY="123.0" mnemonicParsing="false" onAction="#switchToNewAppointment" text="Here" />
+                  <Label alignment="CENTER" layoutX="48.0" layoutY="65.0" prefHeight="114.0" prefWidth="198.0" text="Make a New Appointment" textAlignment="CENTER" textFill="#f54141" wrapText="true">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Label>
+                  <Button fx:id="newApptButton" layoutX="106.0" layoutY="193.0" mnemonicParsing="false" onAction="#switchToNewAppointment" style="-fx-background-color: #DCAEB7#DCAEB7 #DCAEB7#DCAEB7;" text="Here">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Button>
                </children>
             </Pane>
-            <Label layoutX="259.0" layoutY="95.0" prefHeight="35.0" prefWidth="65.0" text="Welcome," textAlignment="CENTER" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="95.0">
+            <Label layoutX="454.0" layoutY="107.0" prefHeight="56.0" prefWidth="250.0" text="Welcome," textAlignment="CENTER" textFill="#864646" AnchorPane.leftAnchor="454.0" AnchorPane.topAnchor="107.0">
                <font>
-                  <Font size="14.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="firstName" layoutX="340.0" layoutY="95.0" prefHeight="35.0" prefWidth="65.0" text="FName" textAlignment="CENTER">
+<<<<<<< HEAD
+            <Label fx:id="firstName" layoutX="785.0" layoutY="97.0" prefHeight="82.0" prefWidth="272.0" text="FName" textAlignment="CENTER" textFill="#864646">
+=======
+            <Label fx:id="firstName" layoutX="340.0" layoutY="95.0" prefHeight="35.0" prefWidth="65.0" textAlignment="CENTER">
+>>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
                <font>
-                  <Font size="14.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
+<<<<<<< HEAD
+            <Label layoutX="537.0" layoutY="-25.0" prefHeight="99.0" prefWidth="378.0" text="HeroBlood" textAlignment="CENTER" textFill="#ff4040">
+=======
          </children>
       </AnchorPane>
-      <Pane prefHeight="70.0" prefWidth="649.0" style="-fx-background-color: #FF4848#FF4848 #FF4848#FF4848;">
+      <Pane prefHeight="70.0" prefWidth="1368.0" style="-fx-background-color: #FF4848#FF4848 #FF4848#FF4848;">
          <children>
-            <Label layoutX="242.0" layoutY="7.0" prefHeight="59.0" prefWidth="166.0" text="HeroBlood" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="604.0" layoutY="9.0" prefHeight="59.0" prefWidth="166.0" text="HeroBlood" textAlignment="CENTER" textFill="WHITE">
+>>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
                <font>
-                  <Font name="System Bold" size="36.0" />
+                  <Font name="System Bold" size="80.0" />
                </font>
             </Label>
-            <Button fx:id="logOutButton" layoutX="585.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log out">
+<<<<<<< HEAD
+            <Button fx:id="logOutButton" layoutX="36.0" layoutY="-17.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log out">
+=======
+            <Button fx:id="logOutButton" layoutX="1261.0" layoutY="28.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log out">
+>>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
                <font>
-                  <Font size="11.0" />
+                  <Font size="26.0" />
                </font>
             </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1264.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/Logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="202.0" fitWidth="195.0" layoutX="1239.0" layoutY="528.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../blood%20pic%202.png" />
+               </image>
+            </ImageView>
          </children>
-      </Pane>
+      </AnchorPane>
    </children>
 </AnchorPane>

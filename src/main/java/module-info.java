@@ -7,9 +7,13 @@ module au.edu.unsw.infs2605.donationsystem {
     requires javafx.controls;
     requires javafx.graphicsEmpty;
     requires javafx.graphics;
+<<<<<<< Updated upstream
     requires java.sql;
     requires java.desktop;
     requires java.logging;
+=======
+    requires java.desktop;
+>>>>>>> Stashed changes
 
     opens au.edu.unsw.infs2605.donationsystem to javafx.fxml;
     opens au.edu.unsw.infs2605.donationsystem.data to javafx.fxml;
