@@ -17,6 +17,7 @@ public class donationsData {
     private String date;
     private String time;
     
+    
     //constructor
     public donationsData(String id ,String donationType, String donorCentre, String date, String time) {
         this.id = id;
@@ -24,6 +25,7 @@ public class donationsData {
         this.donorCentre = donorCentre;
         this.date = date;
         this.time = time;
+        
     }
     
     //getters
