@@ -42,7 +42,7 @@ public class donorDatabase {
         st.execute(createQuery);
         
         //insert user accounts to test 
-        String insertUserAccount = "INSERT INTO Users (ID, USERNAME, PASSWORD)"
+        String insertUserAccount = "INSERT OR IGNORE INTO Users (ID, USERNAME, PASSWORD)"
                 + "VALUES (1, 'stellar', 'starlight');";
         
         //execute statement
@@ -68,6 +68,18 @@ public class donorDatabase {
         //close connection and statements
         st.close();
         conn.close();
+        
+//        
+//        //delete a table based on a centre 
+//        String deleteQuery = "DELETE FROM Donations WHERE CENTRE = 'Randwick Blood'";
+//        
+//        //execute query
+//        st.execute(deleteQuery);
+//        
+//        //close connection and statements
+//        st.close();
+//        conn.close();
+        
     }
     
     public void insertDonationData() throws SQLException {

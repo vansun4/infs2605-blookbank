@@ -97,6 +97,7 @@ public class myDonationAppointmentController {
     public void initialize() throws SQLException {
         //get list of the donations in the donorDatabase
         ObservableList<donationsData> Donations = database.getData();
+       
         
         //set list into tableview
         donation.setItems(Donations);
