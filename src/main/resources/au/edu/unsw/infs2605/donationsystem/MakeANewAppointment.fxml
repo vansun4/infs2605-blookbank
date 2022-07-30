@@ -4,82 +4,92 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.makeAppointmentController">
    <children>
-      <Pane layoutX="303.0" layoutY="64.0" prefHeight="99.0" prefWidth="297.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
-         <children>
-            <Label layoutX="72.0" layoutY="8.0" text="Thank You" textFill="#e88324">
-               <font>
-                  <Font name="Arial Black" size="26.0" />
-               </font>
-            </Label>
-            <Label layoutX="59.0" layoutY="49.0" prefHeight="46.0" prefWidth="178.0" text="Thank you for registering your interest. Your donation will save many lives" textAlignment="CENTER" textFill="#9e6838" wrapText="true">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Pane layoutX="300.0" layoutY="158.0" opacity="0.85" prefHeight="237.0" prefWidth="297.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
-         <children>
-            <Label layoutX="60.0" layoutY="14.0" text="What donation would you like to make?">
-               <font>
-                  <Font name="System Bold Italic" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="36.0" layoutY="68.0" text="Which donation centre would you like to choose?">
-               <font>
-                  <Font name="System Bold Italic" size="12.0" />
-               </font>
-            </Label>
-            <DatePicker fx:id="apptDatePicker" layoutX="39.0" layoutY="149.0" prefHeight="31.0" prefWidth="142.0" promptText="04/04/2022" />
-            <Label layoutX="46.0" layoutY="125.0" text="Choose an available appointment time:">
-               <font>
-                  <Font name="System Bold Italic" size="12.0" />
-               </font>
-            </Label>
-            <Button fx:id="clearInputButton" layoutX="39.0" layoutY="190.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" text="Clear Input">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Button>
-            <Button fx:id="confirmBookingButton" layoutX="152.0" layoutY="190.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="39.0" prefWidth="123.0" text="Confirm your booking" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Button>
-            <ChoiceBox fx:id="donationTypeChoice" layoutX="38.0" layoutY="35.0" prefHeight="25.0" prefWidth="237.0" />
-            <ChoiceBox fx:id="donationCentreChoice" layoutX="38.0" layoutY="90.0" prefHeight="25.0" prefWidth="237.0" />
-            <ChoiceBox fx:id="apptTimeChoice" layoutX="186.0" layoutY="149.0" prefHeight="31.0" prefWidth="89.0" />
-         </children>
-      </Pane>
-      <Pane layoutX="-9.0" layoutY="-5.0" prefHeight="70.0" prefWidth="1378.0" style="-fx-background-color: #FF4848#FF4848 #FF4848#FF4848;">
-         <children>
-            <Label layoutX="512.0" layoutY="15.0" prefHeight="59.0" prefWidth="398.0" text="Make a New Appointment" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="36.0" />
-               </font>
-            </Label>
-            <Button fx:id="homeButton" layoutX="1294.0" layoutY="25.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Home">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-      <Button fx:id="newDonorCentreButton" layoutX="82.0" layoutY="211.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="79.0" prefWidth="154.0" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
+      <ImageView fitHeight="768.0" fitWidth="1366.0" opacity="0.31">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/iStock-627290560smaller-scaled.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="356.0" layoutY="24.0" prefHeight="73.0" prefWidth="665.0" text="Make a New Appointment" textFill="#a44141">
          <font>
-            <Font size="11.0" />
-         </font>
-      </Button>
-      <Label layoutX="28.0" layoutY="164.0" text="No option for a donation centre near you?">
-         <font>
-            <Font name="System Bold Italic" size="16.0" />
+            <Font size="60.0" />
          </font>
       </Label>
+      <Button fx:id="newDonorCentreButton" layoutX="381.0" layoutY="662.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="77.0" prefWidth="292.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to register a new Donation Centre!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="15.0" layoutY="651.0" prefHeight="101.0" prefWidth="284.0" text="No option for a donation centre near you?" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="782.0" layoutY="119.0" prefHeight="89.0" prefWidth="509.0" text="Thank You" textAlignment="CENTER" textFill="#a11212">
+         <font>
+            <Font name="Arial Black" size="60.0" />
+         </font>
+      </Label>
+      <Label layoutX="811.0" layoutY="179.0" prefHeight="135.0" prefWidth="456.0" text="Thank you for registering your interest. Your donation will save many lives" textAlignment="CENTER" textFill="#a11212" wrapText="true">
+         <font>
+            <Font name="System Font" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="841.0" layoutY="302.0" text="1.   What donation would you like to make?" textFill="#720e0e">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="donationTypeChoice" layoutX="812.0" layoutY="348.0" prefHeight="42.0" prefWidth="448.0" />
+      <Label layoutX="792.0" layoutY="419.0" text="2.   Which donation centre would you like to choose?" textFill="#720e0e">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="donationCentreChoice" layoutX="813.0" layoutY="465.0" prefHeight="42.0" prefWidth="449.0" />
+      <Label layoutX="828.0" layoutY="534.0" text="3.   Choose an available appointment time:" textFill="#720e0e">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="apptDatePicker" layoutX="812.0" layoutY="580.0" prefHeight="48.0" prefWidth="307.0" promptText="04/04/2022" />
+      <ChoiceBox fx:id="apptTimeChoice" layoutX="1137.0" layoutY="580.0" prefHeight="48.0" prefWidth="125.0" />
+      <Button fx:id="confirmBookingButton" layoutX="1068.0" layoutY="662.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="75.0" prefWidth="197.0" style="-fx-background-color: #9ADA9A#9ADA9A;" text="Confirm your booking" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearInputButton" layoutX="810.0" layoutY="662.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="198.0" style="-fx-background-color: #FF6E6E#FF6E6E;" text="Clear Input" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="homeButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Home">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="114.0" fitWidth="135.0" layoutX="1230.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/Logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="171.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="484.0" fitWidth="639.0" layoutX="59.0" layoutY="153.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/ezgif-1-d028624f40.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="95.0" fitWidth="74.0" layoutX="290.0" layoutY="665.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/3899497.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
