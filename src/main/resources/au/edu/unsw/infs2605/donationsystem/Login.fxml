@@ -120,26 +120,46 @@
                   <Font size="45.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="82.0" layoutY="82.0" prefHeight="73.0" prefWidth="434.0" text="Create, manage and schedule a donation appointment " textAlignment="CENTER" textFill="#403535d4" wrapText="true">
+            <Label contentDisplay="CENTER" layoutX="76.0" layoutY="82.0" prefHeight="73.0" prefWidth="434.0" text="Create, manage and schedule a donation appointment " textAlignment="CENTER" textFill="#403535d4" wrapText="true">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="82.0" layoutY="128.0" prefHeight="73.0" prefWidth="434.0" text="Manage your own personal dashboard" textAlignment="CENTER" textFill="#403535d4" wrapText="true">
+            <Label contentDisplay="CENTER" layoutX="75.0" layoutY="128.0" prefHeight="73.0" prefWidth="434.0" text="Manage your own personal dashboard" textAlignment="CENTER" textFill="#403535d4" wrapText="true">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="82.0" layoutY="173.0" prefHeight="73.0" prefWidth="434.0" text="Filter your upcoming appointments" textAlignment="CENTER" textFill="#403535d4" wrapText="true">
+            <Label contentDisplay="CENTER" layoutX="75.0" layoutY="173.0" prefHeight="73.0" prefWidth="434.0" text="Filter your upcoming appointments" textAlignment="CENTER" textFill="#403535d4" wrapText="true">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="82.0" layoutY="219.0" prefHeight="73.0" prefWidth="434.0" text="Update, edit and remove your appointments" textAlignment="CENTER" textFill="#403535d4" wrapText="true">
+            <Label contentDisplay="CENTER" layoutX="74.0" layoutY="219.0" prefHeight="73.0" prefWidth="434.0" text="Update, edit and remove your appointments" textAlignment="CENTER" textFill="#403535d4" wrapText="true">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="20.0" layoutY="103.0">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="20.0" layoutY="149.0">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="20.0" layoutY="194.0">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="20.0" layoutY="240.0">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <ImageView fitHeight="129.0" fitWidth="131.0" layoutX="1233.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
