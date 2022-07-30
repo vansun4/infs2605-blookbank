@@ -21,7 +21,7 @@
             <Font size="60.0" />
          </font>
       </Label>
-      <Button fx:id="newDonorCentreButton" layoutX="381.0" layoutY="662.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="77.0" prefWidth="292.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to register a new Donation Centre!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button fx:id="newDonorCentreButton" layoutX="381.0" layoutY="662.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="77.0" prefWidth="292.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
@@ -60,12 +60,12 @@
       </Label>
       <DatePicker fx:id="apptDatePicker" layoutX="812.0" layoutY="580.0" prefHeight="48.0" prefWidth="307.0" promptText="04/04/2022" />
       <ChoiceBox fx:id="apptTimeChoice" layoutX="1137.0" layoutY="580.0" prefHeight="48.0" prefWidth="125.0" />
-      <Button fx:id="confirmBookingButton" layoutX="1068.0" layoutY="662.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="75.0" prefWidth="197.0" style="-fx-background-color: #9ADA9A#9ADA9A;" text="Confirm your booking" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button fx:id="confirmBookingButton" layoutX="1068.0" layoutY="662.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="75.0" prefWidth="197.0" style="-fx-background-color: #9ADA9A#9ADA9A;" text="Confirm your booking" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="clearInputButton" layoutX="810.0" layoutY="662.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="198.0" style="-fx-background-color: #FF6E6E#FF6E6E;" text="Clear Input" textFill="WHITE">
+      <Button fx:id="clearInputButton" layoutX="810.0" layoutY="662.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="198.0" style="-fx-background-color: #FF6E6E#FF6E6E;" text="Clear Input">
          <font>
             <Font size="20.0" />
          </font>
