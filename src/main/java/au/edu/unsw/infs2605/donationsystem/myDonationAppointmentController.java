@@ -16,6 +16,7 @@ import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -25,6 +26,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -112,8 +114,48 @@ public class myDonationAppointmentController {
         timeCol.setCellValueFactory(new PropertyValueFactory<>("time"));
         
         //edit tableview data
+        //https://www.youtube.com/watch?v=M_kp20qrtLw
+        donation.setEditable(true);
         donationTypeCol.setCellFactory(TextFieldTableCell.forTableColumn());
-        //donationTypeCol.setOnEditCommit(getDonationsTbl().getItems());
+        donorCentreCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        dateCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        timeCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        
+        //save data when it has been edited
+        donationTypeCol.setOnEditCommit(new EventHandler<CellEditEvent<donationsData, String>>() {
+            @Override
+            public void handle(CellEditEvent<donationsData, String> event) {
+                donationsData donate = event.getRowValue();
+                donate.setDonationType(event.getNewValue());
+            }
+        });
+        
+        donorCentreCol.setOnEditCommit(new EventHandler<CellEditEvent<donationsData, String>>() {
+            @Override
+            public void handle(CellEditEvent<donationsData, String> event) {
+                donationsData donate = event.getRowValue();
+                donate.setDonorCentre(event.getNewValue());
+            }
+        });
+        
+        timeCol.setOnEditCommit(new EventHandler<CellEditEvent<donationsData, String>>() {
+            @Override
+            public void handle(CellEditEvent<donationsData, String> event) {
+                donationsData donate = event.getRowValue();
+                donate.setTime(event.getNewValue());
+            }
+        });
+        
+        dateCol.setOnEditCommit(new EventHandler<CellEditEvent<donationsData, String>>() {
+            @Override
+            public void handle(CellEditEvent<donationsData, String> event) {
+                donationsData donate = event.getRowValue();
+                donate.setDate(event.getNewValue());
+            }
+        });
+        
+        
+        
         
         //observable list data
         ObservableList<String> donorTypeList = FXCollections.observableArrayList("Blood","Plasma","Platelet");
@@ -147,7 +189,7 @@ public class myDonationAppointmentController {
     private void switchToMainPage() throws IOException {
         App.setRoot("MainPage");
     }
-    
+  
     //delete the appointment time 
     @FXML 
     private void deleteAppointment(ActionEvent event) throws IOException { 
