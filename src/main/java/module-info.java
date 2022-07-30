@@ -8,6 +8,8 @@ module au.edu.unsw.infs2605.donationsystem {
     requires javafx.graphicsEmpty;
     requires javafx.graphics;
     requires java.sql;
+    requires java.desktop;
+    requires java.logging;
 
     opens au.edu.unsw.infs2605.donationsystem to javafx.fxml;
     opens au.edu.unsw.infs2605.donationsystem.data to javafx.fxml;
