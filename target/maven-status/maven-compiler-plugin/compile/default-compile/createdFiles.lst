@@ -9,7 +9,6 @@ au/edu/unsw/infs2605/donationsystem/MainPageController.class
 au/edu/unsw/infs2605/donationsystem/makeAppointmentController.class
 au/edu/unsw/infs2605/donationsystem/myDonationAppointmentController$4.class
 module-info.class
-au/edu/unsw/infs2605/donationsystem/accessMyDonationsController.class
 au/edu/unsw/infs2605/donationsystem/myDonationAppointmentController$3.class
 au/edu/unsw/infs2605/donationsystem/database/donorDatabase.class
 au/edu/unsw/infs2605/donationsystem/data/donationCentreData.class

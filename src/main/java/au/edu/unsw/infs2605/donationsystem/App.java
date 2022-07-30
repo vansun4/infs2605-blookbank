@@ -34,7 +34,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException, SQLException {
         database.setUpDatabase();
         stage.setTitle("Donation Management System");
-        scene = new Scene(loadFXML("LoginScreen"), 1366, 768);
+        scene = new Scene(loadFXML("Login"), 1366, 768);
         stage.setScene(scene);
         stage.show();
         

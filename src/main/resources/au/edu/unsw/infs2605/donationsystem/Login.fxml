@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,12 +13,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.loginController">
    <children>
+      <ImageView fitHeight="780.0" fitWidth="1366.0" layoutY="-11.0" opacity="0.34">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/blood_donation.jpeg" />
+         </image>
+      </ImageView>
       <Button fx:id="homeButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToHomePage" text="Home">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <Pane layoutX="623.0" layoutY="87.0" prefHeight="642.0" prefWidth="683.0" style="-fx-background-color: white;">
+      <Pane layoutX="644.0" layoutY="113.0" prefHeight="616.0" prefWidth="683.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="152.0" layoutY="40.0" prefHeight="74.0" prefWidth="385.0" text="Donor Login" textFill="#f54444d4">
                <font>
@@ -29,7 +35,7 @@
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="100.0" layoutY="199.0" prefHeight="73.0" prefWidth="106.0" text="Email*" textAlignment="CENTER" textFill="#000000d4">
+            <Label contentDisplay="CENTER" layoutX="64.0" layoutY="199.0" prefHeight="73.0" prefWidth="106.0" text="Email*" textAlignment="CENTER" textFill="#000000d4">
                <font>
                   <Font size="24.0" />
                </font>
@@ -39,32 +45,36 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label contentDisplay="CENTER" layoutX="99.0" layoutY="300.0" prefHeight="73.0" prefWidth="114.0" text="Password*" textAlignment="CENTER" textFill="#000000d4">
+            <Label contentDisplay="CENTER" layoutX="60.0" layoutY="292.0" prefHeight="73.0" prefWidth="114.0" text="Password*" textAlignment="CENTER" textFill="#000000d4">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="passwordField" layoutX="270.0" layoutY="308.0" prefHeight="58.0" prefWidth="355.0" promptText="*******">
+<<<<<<< HEAD
+            <TextField fx:id="passwordField" layoutX="270.0" layoutY="300.0" prefHeight="58.0" prefWidth="355.0" promptText="*******">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
+            <Label contentDisplay="CENTER" layoutX="56.0" layoutY="376.0" prefHeight="73.0" prefWidth="208.0" text="Don't have an account?" textAlignment="CENTER" textFill="#000000d4">
+=======
             <Label contentDisplay="CENTER" layoutX="98.0" layoutY="387.0" prefHeight="73.0" prefWidth="208.0" text="Don't have an account?" textAlignment="CENTER" textFill="#000000d4">
+>>>>>>> 7b20a076a2c187a80470c3cff7c1ee3b4dee64c5
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="362.0" layoutY="388.0" prefHeight="73.0" prefWidth="84.0" text="Sign Up" textAlignment="CENTER" textFill="#ff0404d4">
+            <Label contentDisplay="CENTER" layoutX="338.0" layoutY="376.0" prefHeight="73.0" prefWidth="84.0" text="Sign Up" textAlignment="CENTER" textFill="#ff0404d4">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="489.0" layoutY="388.0" prefHeight="73.0" prefWidth="176.0" text="Forgot Password?" textAlignment="CENTER" textFill="#ff0404d4">
+            <Label contentDisplay="CENTER" layoutX="475.0" layoutY="376.0" prefHeight="73.0" prefWidth="176.0" text="Forgot Password?" textAlignment="CENTER" textFill="#ff0404d4">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="homeButton1" layoutX="99.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleLoginButtonFunction" prefHeight="58.0" prefWidth="526.0" style="-fx-background-color: #F97272#F97272;" text="Login" textFill="WHITE">
+            <Button fx:id="homeButton1" layoutX="55.0" layoutY="451.0" mnemonicParsing="false" onAction="#handleLoginButtonFunction" prefHeight="58.0" prefWidth="570.0" style="-fx-background-color: #F97272#F97272;" text="Login" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
@@ -80,19 +90,24 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Label fx:id="errorMessage" layoutX="321.0" layoutY="322.0" prefHeight="31.0" prefWidth="79.0">
+            <Label fx:id="errorMessage" layoutX="359.0" layoutY="563.0" prefHeight="31.0" prefWidth="79.0">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="477.0" layoutY="-75.0" pickOnBounds="true" preserveRatio="true">
+<<<<<<< HEAD
+            <ImageView fitHeight="103.0" fitWidth="152.0" layoutX="292.0" layoutY="517.0" pickOnBounds="true" preserveRatio="true">
+=======
+            <ImageView fitHeight="58.0" fitWidth="106.0" layoutX="477.0" layoutY="-75.0" pickOnBounds="true" preserveRatio="true">
+>>>>>>> 7b20a076a2c187a80470c3cff7c1ee3b4dee64c5
                <image>
-                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
+                  <Image url="@../../../../../../../../../../../Desktop/blood_donation.png" />
                </image>
             </ImageView>
+            <PasswordField fx:id="passwordField" layoutX="270.0" layoutY="309.0" prefHeight="46.0" prefWidth="355.0" />
          </children>
       </Pane>
-      <Pane layoutX="40.0" layoutY="145.0" prefHeight="240.0" prefWidth="524.0" style="-fx-background-color: white;">
+      <Pane layoutX="40.0" layoutY="117.0" prefHeight="240.0" prefWidth="524.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="121.0" layoutY="12.0" prefHeight="74.0" prefWidth="288.0" text="Donate Blood" textFill="#f54444d4">
                <font>
@@ -109,6 +124,7 @@
                   <Font size="19.0" />
                </font>
             </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="165.0" layoutY="-63.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
       <Pane layoutX="39.0" layoutY="422.0" prefHeight="307.0" prefWidth="524.0" style="-fx-background-color: white;">
@@ -138,7 +154,32 @@
                   <Font size="19.0" />
                </font>
             </Label>
+            <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="29.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="29.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="29.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="29.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/5610944.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
+      <ImageView fitHeight="103.0" fitWidth="123.0" layoutX="1237.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

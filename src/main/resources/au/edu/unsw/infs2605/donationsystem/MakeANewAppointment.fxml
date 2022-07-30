@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="768.0" fitWidth="1366.0" opacity="0.31">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/iStock-627290560smaller-scaled.jpeg" />
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/iStock-627290560smaller-scaled.jpeg" />
          </image>
       </ImageView>
       <Label layoutX="356.0" layoutY="24.0" prefHeight="73.0" prefWidth="665.0" text="Make a New Appointment" textFill="#a44141">
@@ -77,18 +77,18 @@
       </Button>
       <ImageView fitHeight="114.0" fitWidth="135.0" layoutX="1230.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/Logo.png" />
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="171.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="484.0" fitWidth="639.0" layoutX="59.0" layoutY="153.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/ezgif-1-d028624f40.png" />
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/ezgif-1-d028624f40.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="95.0" fitWidth="74.0" layoutX="290.0" layoutY="665.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/3899497.png" />
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/3899497.png" />
          </image>
       </ImageView>
    </children>

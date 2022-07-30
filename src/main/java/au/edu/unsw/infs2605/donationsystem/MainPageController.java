@@ -29,14 +29,7 @@ public class MainPageController {
     
     @FXML
     private Label firstName;
-    
-    //switch screen to access the donor's details
-    
-    @FXML
-    private void switchToDonorDetails() throws IOException {
-        App.setRoot("AccessMyDonationDetails");
-    }
-    
+
     //switch screen to access the list of donation appointments made
     @FXML
     private void switchToMyDonationAppointment() throws IOException {
@@ -52,6 +45,6 @@ public class MainPageController {
     //switch screen to logout
     @FXML
     private void switchToLogin() throws IOException {
-        App.setRoot("LoginScreen");
+        App.setRoot("Login");
     }
 }

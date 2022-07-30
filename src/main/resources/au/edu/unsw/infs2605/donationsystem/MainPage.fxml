@@ -25,9 +25,9 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <ImageView fitHeight="114.0" fitWidth="135.0" layoutX="1230.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="140.0" fitWidth="159.0" layoutX="1203.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/Logo.png" />
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
          </image>
       </ImageView>
       <Label layoutX="398.0" layoutY="126.0" prefHeight="73.0" prefWidth="277.0" text="Welcome," textFill="#a44141">
@@ -40,7 +40,7 @@
             <Font size="60.0" />
          </font>
       </Label>
-      <Pane layoutX="85.0" layoutY="284.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
+      <Pane layoutX="85.0" layoutY="360.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
          <children>
             <Label layoutX="67.0" layoutY="52.0" prefHeight="109.0" prefWidth="250.0" text="My Donation Appointments" textAlignment="CENTER" textFill="#e14545" wrapText="true">
                <font>
@@ -54,7 +54,7 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="882.0" layoutY="288.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
+      <Pane layoutX="882.0" layoutY="360.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
          <children>
             <Button fx:id="newApptButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" onAction="#switchToNewAppointment" style="-fx-background-color: #FA6B3D#FA6B3D #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
                <font>
@@ -68,12 +68,21 @@
             </Label>
          </children>
       </Pane>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1171.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="139.0" fitWidth="162.0" layoutX="1198.0" layoutY="6.0">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="124.0" layoutY="534.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="306.0" fitWidth="392.0" layoutX="477.0" layoutY="368.0" opacity="0.83" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/ezgif-1-d028624f40.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="124.0" layoutY="534.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="119.0" fitWidth="124.0" layoutX="216.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/3634820.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="171.0" layoutX="1007.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/1022040.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
