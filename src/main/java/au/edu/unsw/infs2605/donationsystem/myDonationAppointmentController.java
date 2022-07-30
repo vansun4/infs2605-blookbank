@@ -67,7 +67,6 @@ public class myDonationAppointmentController {
     
     private Label id;
     
-    private ComboBox testTime;
     
 
     
