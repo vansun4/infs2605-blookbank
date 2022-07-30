@@ -8,102 +8,86 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.MainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.MainPageController">
    <children>
-<<<<<<< HEAD
-      <AnchorPane layoutX="-1.0" layoutY="46.0" prefHeight="725.0" prefWidth="1453.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
-=======
-      <AnchorPane layoutY="-1.0" prefHeight="765.0" prefWidth="1365.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;">
->>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
+      <ImageView fitHeight="768.0" fitWidth="1366.0" opacity="0.31">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/iStock-627290560smaller-scaled.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="540.0" layoutY="26.0" prefHeight="73.0" prefWidth="302.0" text="HeroBlood" textFill="#a44141">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Label>
+      <Button fx:id="logOutButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Log out">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="114.0" fitWidth="135.0" layoutX="1230.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="398.0" layoutY="126.0" prefHeight="73.0" prefWidth="277.0" text="Welcome," textFill="#a44141">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Label>
+      <Label fx:id="firstName" layoutX="748.0" layoutY="126.0" prefHeight="73.0" prefWidth="190.0" text="FName" textFill="#a44141">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Label>
+      <Pane layoutX="51.0" layoutY="284.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
          <children>
-            <ImageView fitHeight="774.0" fitWidth="1455.0" layoutX="1.0" layoutY="-49.0" opacity="0.47">
-               <image>
-                  <Image url="@../../../../../../../../../../../Desktop/iStock-627290560smaller-scaled.jpeg" />
-               </image>
-            </ImageView>
-            <Pane layoutX="75.0" layoutY="246.0" prefHeight="303.0" prefWidth="303.0" style="-fx-background-color: #F8EFF1#F8EFF1;">
-               <children>
-                  <Label alignment="CENTER" layoutX="46.0" layoutY="65.0" prefHeight="114.0" prefWidth="209.0" text="My Donation Appointments" textAlignment="CENTER" textFill="#f54141" wrapText="true">
-                     <font>
-                        <Font size="30.0" />
-                     </font></Label>
-                  <Button fx:id="donationApptButton" layoutX="101.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToMyDonationAppointment" style="-fx-background-color: #DCAEB7#DCAEB7;" text="Here">
-                     <font>
-                        <Font size="25.0" />
-                     </font></Button>
-               </children>
-            </Pane>
-            <Pane layoutX="1040.0" layoutY="244.0" prefHeight="303.0" prefWidth="303.0" style="-fx-background-color: #F8EFF1#F8EFF1 #F8EFF1#F8EFF1;">
-               <children>
-                  <Label layoutX="46.0" layoutY="62.0" prefHeight="117.0" prefWidth="219.0" text="Access My Donation Details" textAlignment="CENTER" textFill="#f54141" wrapText="true">
-                     <font>
-                        <Font size="30.0" />
-                     </font></Label>
-                  <Button fx:id="donorDetailsButton" layoutX="108.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToDonorDetails" style="-fx-background-color: #DCAEB7#DCAEB7 #DCAEB7#DCAEB7;" text="Here">
-                     <font>
-                        <Font size="25.0" />
-                     </font></Button>
-               </children>
-            </Pane>
-            <Pane layoutX="566.0" layoutY="243.0" prefHeight="303.0" prefWidth="303.0" style="-fx-background-color: #F8EFF1#F8EFF1;">
-               <children>
-                  <Label alignment="CENTER" layoutX="48.0" layoutY="65.0" prefHeight="114.0" prefWidth="198.0" text="Make a New Appointment" textAlignment="CENTER" textFill="#f54141" wrapText="true">
-                     <font>
-                        <Font size="30.0" />
-                     </font></Label>
-                  <Button fx:id="newApptButton" layoutX="106.0" layoutY="193.0" mnemonicParsing="false" onAction="#switchToNewAppointment" style="-fx-background-color: #DCAEB7#DCAEB7 #DCAEB7#DCAEB7;" text="Here">
-                     <font>
-                        <Font size="25.0" />
-                     </font></Button>
-               </children>
-            </Pane>
-            <Label layoutX="454.0" layoutY="107.0" prefHeight="56.0" prefWidth="250.0" text="Welcome," textAlignment="CENTER" textFill="#864646" AnchorPane.leftAnchor="454.0" AnchorPane.topAnchor="107.0">
+            <Label layoutX="67.0" layoutY="52.0" prefHeight="109.0" prefWidth="250.0" text="My Donation Appointments" textAlignment="CENTER" textFill="#e14545" wrapText="true">
                <font>
-                  <Font size="50.0" />
+                  <Font name="Arial Bold" size="34.0" />
                </font>
             </Label>
-<<<<<<< HEAD
-            <Label fx:id="firstName" layoutX="785.0" layoutY="97.0" prefHeight="82.0" prefWidth="272.0" text="FName" textAlignment="CENTER" textFill="#864646">
-=======
-            <Label fx:id="firstName" layoutX="340.0" layoutY="95.0" prefHeight="35.0" prefWidth="65.0" textAlignment="CENTER">
->>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
+            <Button fx:id="donationApptButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
                <font>
-                  <Font size="50.0" />
-               </font>
-            </Label>
-<<<<<<< HEAD
-            <Label layoutX="537.0" layoutY="-25.0" prefHeight="99.0" prefWidth="378.0" text="HeroBlood" textAlignment="CENTER" textFill="#ff4040">
-=======
-         </children>
-      </AnchorPane>
-      <Pane prefHeight="70.0" prefWidth="1368.0" style="-fx-background-color: #FF4848#FF4848 #FF4848#FF4848;">
-         <children>
-            <Label layoutX="604.0" layoutY="9.0" prefHeight="59.0" prefWidth="166.0" text="HeroBlood" textAlignment="CENTER" textFill="WHITE">
->>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
-               <font>
-                  <Font name="System Bold" size="80.0" />
-               </font>
-            </Label>
-<<<<<<< HEAD
-            <Button fx:id="logOutButton" layoutX="36.0" layoutY="-17.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log out">
-=======
-            <Button fx:id="logOutButton" layoutX="1261.0" layoutY="28.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log out">
->>>>>>> e203bf2207ad4c572aa941a5a181d5984bb55dc0
-               <font>
-                  <Font size="26.0" />
+                  <Font size="30.0" />
                </font>
             </Button>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1264.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../../Desktop/Logo.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="202.0" fitWidth="195.0" layoutX="1239.0" layoutY="528.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../blood%20pic%202.png" />
-               </image>
-            </ImageView>
          </children>
-      </AnchorPane>
+      </Pane>
+      <Pane layoutX="487.0" layoutY="285.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
+         <children>
+            <Button fx:id="newApptButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #FA6B3D#FA6B3D #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Label layoutX="67.0" layoutY="51.0" prefHeight="109.0" prefWidth="250.0" text="Make a New Appointment" textAlignment="CENTER" textFill="#e14545" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="939.0" layoutY="285.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
+         <children>
+            <Button fx:id="donorDetailsButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #FA6B3D#FA6B3D #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Label layoutX="54.0" layoutY="52.0" prefHeight="109.0" prefWidth="277.0" text="Access My Donation Details" textAlignment="CENTER" textFill="#e14545" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1171.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="139.0" fitWidth="162.0" layoutX="1198.0" layoutY="6.0">
+         <image>
+            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="124.0" layoutY="534.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
