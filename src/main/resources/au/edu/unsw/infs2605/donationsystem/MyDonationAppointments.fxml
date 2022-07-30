@@ -38,11 +38,10 @@
       </Button>
       <TableView fx:id="donation" layoutX="25.0" layoutY="118.0" opacity="0.89" prefHeight="196.0" prefWidth="1005.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
         <columns>
-          <TableColumn fx:id="donationTypeCol" prefWidth="253.0" text="Donation Type " />
-          <TableColumn fx:id="donorCentreCol" prefWidth="248.0" text="Donor Centre" />
-          <TableColumn fx:id="dateCol" prefWidth="189.0" text="Date" />
-          <TableColumn fx:id="timeCol" prefWidth="155.0" text="Time" />
-            <TableColumn prefWidth="158.99993896484375" text="Test Data" />
+          <TableColumn fx:id="donationTypeCol" prefWidth="317.0" text="Donation Type " />
+          <TableColumn fx:id="donorCentreCol" prefWidth="331.0" text="Donor Centre" />
+          <TableColumn fx:id="dateCol" prefWidth="174.0" text="Date" />
+          <TableColumn fx:id="timeCol" prefWidth="182.0" text="Time" />
         </columns>
 <!--         <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
