@@ -32,7 +32,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <TableView fx:id="donation" layoutX="33.0" layoutY="93.0" opacity="0.89" prefHeight="179.0" prefWidth="962.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
+      <TableView fx:id="donation" editable="true" layoutX="33.0" layoutY="93.0" opacity="0.89" prefHeight="179.0" prefWidth="962.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
         <columns>
           <TableColumn fx:id="donationTypeCol" prefWidth="253.0" text="Donation Type " />
           <TableColumn fx:id="donorCentreCol" prefWidth="248.0" text="Donor Centre" />
