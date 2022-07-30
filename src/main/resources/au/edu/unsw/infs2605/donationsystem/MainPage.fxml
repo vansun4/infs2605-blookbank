@@ -20,7 +20,7 @@
             <Font size="60.0" />
          </font>
       </Label>
-      <Button fx:id="logOutButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Log out">
+      <Button fx:id="logOutButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log out">
          <font>
             <Font size="25.0" />
          </font>
@@ -40,42 +40,28 @@
             <Font size="60.0" />
          </font>
       </Label>
-      <Pane layoutX="51.0" layoutY="284.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
+      <Pane layoutX="85.0" layoutY="284.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
          <children>
             <Label layoutX="67.0" layoutY="52.0" prefHeight="109.0" prefWidth="250.0" text="My Donation Appointments" textAlignment="CENTER" textFill="#e14545" wrapText="true">
                <font>
                   <Font name="Arial Bold" size="34.0" />
                </font>
             </Label>
-            <Button fx:id="donationApptButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
+            <Button fx:id="donationApptButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" onAction="#switchToMyDonationAppointment" style="-fx-background-color: #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="487.0" layoutY="285.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
+      <Pane layoutX="882.0" layoutY="288.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
          <children>
-            <Button fx:id="newApptButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #FA6B3D#FA6B3D #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
+            <Button fx:id="newApptButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" onAction="#switchToNewAppointment" style="-fx-background-color: #FA6B3D#FA6B3D #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
             <Label layoutX="67.0" layoutY="51.0" prefHeight="109.0" prefWidth="250.0" text="Make a New Appointment" textAlignment="CENTER" textFill="#e14545" wrapText="true">
-               <font>
-                  <Font name="Arial Bold" size="34.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Pane layoutX="939.0" layoutY="285.0" prefHeight="312.0" prefWidth="382.0" style="-fx-background-color: #FFF9F1#FFF9F1;">
-         <children>
-            <Button fx:id="donorDetailsButton" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #FA6B3D#FA6B3D #FA6B3D#FA6B3D;" text="Here" textFill="WHITE">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Button>
-            <Label layoutX="54.0" layoutY="52.0" prefHeight="109.0" prefWidth="277.0" text="Access My Donation Details" textAlignment="CENTER" textFill="#e14545" wrapText="true">
                <font>
                   <Font name="Arial Bold" size="34.0" />
                </font>

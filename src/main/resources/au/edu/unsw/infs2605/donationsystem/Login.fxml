@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.loginController">
    <children>
-      <Button fx:id="homeButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Home">
+      <Button fx:id="homeButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToHomePage" text="Home">
          <font>
             <Font size="25.0" />
          </font>
@@ -33,7 +33,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="270.0" layoutY="205.0" prefHeight="58.0" prefWidth="355.0" promptText="james.smith@gmail.com">
+            <TextField fx:id="emailTextField" layoutX="270.0" layoutY="205.0" prefHeight="58.0" prefWidth="355.0" promptText="james.smith@gmail.com">
                <font>
                   <Font size="18.0" />
                </font>
@@ -43,7 +43,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="270.0" layoutY="308.0" prefHeight="58.0" prefWidth="355.0" promptText="*******">
+            <TextField fx:id="passwordField" layoutX="270.0" layoutY="308.0" prefHeight="58.0" prefWidth="355.0" promptText="*******">
                <font>
                   <Font size="18.0" />
                </font>
@@ -69,16 +69,21 @@
                </font>
             </Button>
             <ButtonBar layoutX="91.0" layoutY="179.0" prefHeight="40.0" prefWidth="67.0" />
-            <Button fx:id="homeButton2" layoutX="61.0" layoutY="134.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Button">
+            <Button fx:id="homeButton2" layoutX="61.0" layoutY="134.0" mnemonicParsing="false" onAction="#test2action" text="Button">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="homeButton21" layoutX="63.0" layoutY="176.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Button">
+            <Button fx:id="homeButton21" layoutX="63.0" layoutY="176.0" mnemonicParsing="false" onAction="#test1action" text="Button">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
+            <Label fx:id="errorMessage" layoutX="321.0" layoutY="322.0" prefHeight="31.0" prefWidth="79.0">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane layoutX="40.0" layoutY="145.0" prefHeight="240.0" prefWidth="524.0" style="-fx-background-color: white;">
@@ -129,11 +134,6 @@
             </Label>
          </children>
       </Pane>
-      <Label layoutX="469.0" layoutY="78.0" text="Empty Label">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="202.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="280.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true" />
    </children>
