@@ -38,10 +38,15 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
         
-        donationsRecords.add(new donationsData("", "plasma", "Randwick Blood","12/02/2012","12:00PM"));
-        donationsRecords.add(new donationsData("", "blood", " Campsie Health","31/05/2009","04:30PM"));
-        donationsRecords.add(new donationsData("", "platelets", "Chatswood Plus","23/01/2019","02:00PM"));
-        donationsRecords.add(new donationsData("", "blood", "Epping Health","20/06/2022","09:00AM"));
+//        donationsRecords.add(new donationsData("", "plasma", "Randwick Blood","12/02/2012","12:00PM"));
+//        donationsRecords.add(new donationsData("", "blood", " Campsie Health","31/05/2009","04:30PM"));
+//        donationsRecords.add(new donationsData("", "platelets", "Chatswood Plus","23/01/2019","02:00PM"));
+//        donationsRecords.add(new donationsData("", "blood", "Epping Health","20/06/2022","09:00AM"));
+        
+        donationsRecords.add(new donationsData("plasma", "Randwick Blood","12/02/2012","12:00PM"));
+        donationsRecords.add(new donationsData("blood", " Campsie Health","31/05/2009","04:30PM"));
+        donationsRecords.add(new donationsData("platelets", "Chatswood Plus","23/01/2019","02:00PM"));
+        donationsRecords.add(new donationsData("blood", "Epping Health","20/06/2022","09:00AM"));
         
         
     }

@@ -29,6 +29,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 
@@ -40,9 +41,6 @@ public class myDonationAppointmentController {
     private donationsData newRec = null;
     
     //fxids
-    @FXML 
-    private Button homeButton;
-    
     @FXML
     private Button makeNewApptButton; 
 
@@ -58,6 +56,9 @@ public class myDonationAppointmentController {
     @FXML
     private Button apptReceiptButton;
     
+    @FXML 
+    private Button Logout;
+    
     @FXML
     private ChoiceBox donationTypeChoice;
     
@@ -69,9 +70,38 @@ public class myDonationAppointmentController {
     
     private Label id;
     
+    @FXML 
+    private TextField donationTypeText;
+    
+    @FXML 
+    private TextField centreText;
+    
+    @FXML 
+    private TextField dateText;
+    
+    @FXML 
+    private TextField timeText;
+    
+//    @FXML
+//    private Tooltip dType = new Tooltip("Enter Donation Type");
+//    
+//    @FXML
+//    private Tooltip dCentre = new Tooltip("Enter Donation Centre");
+//    
+//    @FXML
+//    private Tooltip dDate = new Tooltip("Enter Date");
+//    
+//    @FXML
+//    private Tooltip dTime = new Tooltip("Enter Time");
+    
+    @FXML
+    private Button addData;
+    
+    @FXML 
+    private Button deleteData;
+    
     
 
-    
     @FXML
     private DatePicker apptDatePicker;
     
@@ -95,8 +125,8 @@ public class myDonationAppointmentController {
     @FXML
     TableColumn<donationsData, String> timeCol;
     
-    @FXML
-    private ListView<donationsData> data;
+//    @FXML
+//    private ListView<donationsData> data;
     
     @FXML 
     public void initialize() throws SQLException {
@@ -154,8 +184,18 @@ public class myDonationAppointmentController {
             }
         });
         
-        
-        
+        //add data to the table view 
+//        addData.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent arg0) {
+//                donationsData donationAddition = new donationsData(id.getText(), donationTypeText.getText(), centreText.getText(),
+//                dateText.getText(), timeText.getText());
+//                add(donationAddition);
+//            }
+//        });
+//        
+  
+    
         
         //observable list data
         ObservableList<String> donorTypeList = FXCollections.observableArrayList("Blood","Plasma","Platelet");
@@ -173,21 +213,18 @@ public class myDonationAppointmentController {
         
         apptTimeChoice.setItems(apptTimeList);
         apptTimeChoice.setValue("");  
- 
-        
-        
-        List<donationsData> donationsRecord = App.getDonationsRecords();
-        
-        for(donationsData donation: donationsRecord) {
-            data.getItems().add(donation);
-        }
-        
+
+    }
+
+    public void add(donationsData donationAddition) {
+        donation.getItems().add(donationAddition);
     }
     
-    //return to the main screen 
     @FXML
-    private void switchToMainPage() throws IOException {
-        App.setRoot("MainPage");
+    public void addButtonAction(ActionEvent event) throws IOException {
+        donationsData donationAddition = new donationsData(donationTypeText.getText(), centreText.getText(),
+                dateText.getText(), timeText.getText());
+                add(donationAddition);
     }
   
     //delete the appointment time 
@@ -208,39 +245,6 @@ public class myDonationAppointmentController {
         LocalDate apptDate = apptDatePicker.getValue();
         apptDateString = apptDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
      }
-     
-     @FXML 
-     private void userClickedOnDonations() throws FileNotFoundException {
-         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-         
-         donationsData selected = data.getSelectionModel().getSelectedItem();
-         donationTypeChoice.setValue(selected.getDonationType());
-         donationCentreChoice.setValue(selected.getDonorCentre());
-         apptDatePicker.setValue(LocalDate.parse(selected.getDate(), formatter));
-         apptTimeChoice.setValue(selected.getTime());  
-     }
-     
-     @FXML
-     private void saveUpdatedRecords(ActionEvent event) throws IOException {
-         List<donationsData> updatedRecords = new ArrayList<>();
-         
-         List<donationsData> newRecords = new ArrayList<>();
-         
-         for(donationsData d: updatedRecords) {
-             if(d.equals(newRec)) {
-                 donationsData upData = new donationsData(id.getText(), donationTypeChoice.getValue().toString(),
-                 donationCentreChoice.getValue().toString(), apptDatePicker.getValue().toString(),
-                 apptTimeChoice.getValue().toString());
-
-             }
-             else {
-                 newRecords.add(d);
-             }
-         }
-         
-         App.setDonationsRecords(newRecords);
-         App.setRoot("MyDonationAppointments");
-     }
     
     //generate appointment receipt 
     @FXML
@@ -255,6 +259,13 @@ public class myDonationAppointmentController {
         App.setRoot("MakeANewAppointment");
     }
     
+    //switch screen to logout
+    @FXML
+    private void switchToLogin() throws IOException {
+        App.setRoot("Login");
+    }
     
+    
+
     
 }

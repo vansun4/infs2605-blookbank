@@ -44,6 +44,6 @@ public class registerNewDonorCentreController {
                 centreAddressTextField.getText(), Integer.parseInt(centreNumberTextField.getText())));
         
         App.setDonationsCentre(centre);
-        App.setRoot("MainPage");
+        App.setRoot("MyDonationAppointments");
     }
 }

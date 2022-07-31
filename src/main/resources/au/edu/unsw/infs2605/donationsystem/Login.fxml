@@ -18,11 +18,6 @@
             <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/blood_donation.jpeg" />
          </image>
       </ImageView>
-      <Button fx:id="homeButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToHomePage" text="Home">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
       <Pane layoutX="623.0" layoutY="87.0" prefHeight="642.0" prefWidth="683.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="152.0" layoutY="40.0" prefHeight="74.0" prefWidth="385.0" text="Donor Login" textFill="#f54444d4">
@@ -71,17 +66,7 @@
                </font>
             </Button>
             <ButtonBar layoutX="91.0" layoutY="179.0" prefHeight="40.0" prefWidth="67.0" />
-            <Button fx:id="homeButton2" layoutX="61.0" layoutY="134.0" mnemonicParsing="false" onAction="#test2action" text="Button">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
-            <Button fx:id="homeButton21" layoutX="63.0" layoutY="176.0" mnemonicParsing="false" onAction="#test1action" text="Button">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
-            <Label fx:id="errorMessage" layoutX="359.0" layoutY="563.0" prefHeight="31.0" prefWidth="79.0">
+            <Label fx:id="errorMessage" layoutX="200.0" layoutY="563.0" prefHeight="31.0" prefWidth="393.0">
                <font>
                   <Font size="26.0" />
                </font>

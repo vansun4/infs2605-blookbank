@@ -73,13 +73,13 @@ public class makeAppointmentController {
     //once apppointment is confirmed, switch to the home page 
     @FXML
     private void confirmBooking() throws IOException {
-        App.setRoot("MainPage");
+        App.setRoot("MyDonationAppointments");
     }
     
     //switch scene back to the main page
     @FXML
     private void switchToMainPage() throws IOException {
-        App.setRoot("MainPage");
+        App.setRoot("MyDonationAppointments");
     }
     
     //

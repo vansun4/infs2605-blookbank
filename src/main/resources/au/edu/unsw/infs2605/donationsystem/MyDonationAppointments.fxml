@@ -4,11 +4,11 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -16,22 +16,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.myDonationAppointmentController">
    <children>
-      <ImageView fitHeight="768.0" fitWidth="1366.0" opacity="0.31">
-         <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/iStock-627290560smaller-scaled.jpeg" />
-         </image>
-      </ImageView>
-      <Button fx:id="updateApptButton" layoutX="80.0" layoutY="671.0" mnemonicParsing="false" onAction="#saveUpdatedRecords" prefHeight="78.0" prefWidth="237.0" style="-fx-background-color: #9ADA9A#9ADA9A #9ADA9A#9ADA9A;" text="Update my Appointment " textFill="#070000">
+      <Button fx:id="updateApptButton" layoutX="65.0" layoutY="680.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="286.0" style="-fx-background-color: #9ADA9A#9ADA9A #9ADA9A#9ADA9A;" text="Update my Appointment " textFill="#070000">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="deleteApptButton" layoutX="575.0" layoutY="670.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="78.0" prefWidth="225.0" style="-fx-background-color: #FF6E6E#FF6E6E #FF6E6E#FF6E6E;" text="Delete my Appointment" textFill="#000000cc">
+      <Button fx:id="deleteApptButton" layoutX="580.0" layoutY="682.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="55.0" prefWidth="245.0" style="-fx-background-color: #FF6E6E#FF6E6E #FF6E6E#FF6E6E;" text="Delete my Appointment" textFill="#000000cc">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="apptReceiptButton" layoutX="1018.0" layoutY="667.0" mnemonicParsing="false" onAction="#generateAppointmentReceipt" prefHeight="84.0" prefWidth="286.0" style="-fx-background-color: #B0D8FE#B0D8FE #B0D8FE#B0D8FE;" text="Generate Appointment Receipt" textAlignment="CENTER" textFill="#0022ff" wrapText="true">
+      <Button fx:id="apptReceiptButton" layoutX="1010.0" layoutY="677.0" mnemonicParsing="false" onAction="#generateAppointmentReceipt" prefHeight="73.0" prefWidth="327.0" style="-fx-background-color: #B0D8FE#B0D8FE #B0D8FE#B0D8FE;" text="Generate Appointment Receipt" textAlignment="CENTER" textFill="#0022ff" wrapText="true">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
@@ -52,16 +47,11 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="deleteSlotButton" layoutX="1056.0" layoutY="244.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="248.0" style="-fx-background-color: #FF6E6E#FF6E6E #FF6E6E#FF6E6E #FF6E6E#FF6E6E #FF6E6E#FF6E6E;" text="Delete all Associated Slots" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="deleteSlotButton" layoutX="1056.0" layoutY="244.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="248.0" style="-fx-background-color: #FF6E6E#FF6E6E #FF6E6E#FF6E6E #FF6E6E#FF6E6E #FF6E6E#FF6E6E;" text="Delete a Donation Centre" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <ImageView fitHeight="304.0" fitWidth="392.0" layoutX="935.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/ezgif-1-7660438c87.png" />
-         </image>
-      </ImageView>
       <VBox layoutX="24.0" layoutY="342.0" prefHeight="134.0" prefWidth="422.0" style="-fx-background-color: #FFF2E1#FFF2E1 #FFF2E1#FFF2E1;">
          <children>
             <HBox alignment="BOTTOM_CENTER" prefHeight="54.0" prefWidth="412.0">
@@ -134,27 +124,42 @@
             </HBox>
          </children>
       </VBox>
-      <ListView fx:id="data" layoutX="383.0" layoutY="665.0" prefHeight="83.0" prefWidth="132.0" />
-      <Button fx:id="homeButton" layoutX="34.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Home">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
       <Label layoutX="344.0" layoutY="18.0" prefHeight="73.0" prefWidth="689.0" text="My Donation Appointments" textFill="#a44141">
          <font>
             <Font name="System Bold" size="60.0" />
          </font>
       </Label>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1173.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="114.0" fitWidth="135.0" layoutX="1231.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="89.0" fitWidth="139.0" layoutX="917.0" layoutY="669.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/870179.png" />
-         </image>
-      </ImageView>
+      <Button fx:id="Logout" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log Out" />
+      <SplitPane dividerPositions="0.19032258064516128" layoutX="973.0" layoutY="375.0" prefHeight="237.0" prefWidth="312.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="235.0" prefWidth="305.0">
+               <children>
+                  <TextField fx:id="donationTypeText" layoutX="24.0" layoutY="14.0">
+                     <tooltip>
+                        <Tooltip fx:id="dType" text="Empty Tooltip" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="centreText" layoutX="24.0" layoutY="72.0">
+                     <tooltip>
+                        <Tooltip fx:id="dCentre" text="Empty Tooltip" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="dateText" layoutX="24.0" layoutY="118.0">
+                     <tooltip>
+                        <Tooltip fx:id="dDate" text="Empty Tooltip" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="timeText" layoutX="35.0" layoutY="196.0">
+                     <tooltip>
+                        <Tooltip fx:id="dTime" text="Empty Tooltip" />
+                     </tooltip>
+                  </TextField>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button fx:id="addData" layoutX="993.0" layoutY="634.0" mnemonicParsing="false" onAction="#addButtonAction" text="add" />
+      <Button fx:id="deleteData" layoutX="1118.0" layoutY="634.0" mnemonicParsing="false" text="delete" />
    </children>
 </AnchorPane>
