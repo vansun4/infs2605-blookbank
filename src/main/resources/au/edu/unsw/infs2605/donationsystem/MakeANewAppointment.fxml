@@ -19,12 +19,12 @@
             <Font size="60.0" />
          </font>
       </Label>
-      <Button fx:id="newDonorCentreButton" layoutX="308.0" layoutY="661.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="77.0" prefWidth="292.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="newDonorCentreButton" layoutX="338.0" layoutY="687.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="48.0" prefWidth="429.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to register a new donation centre!" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="673.0" prefHeight="65.0" prefWidth="176.0" text="Do not see your Donation Centre?" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutY="687.0" prefHeight="65.0" prefWidth="234.0" text="Do not see your donation centre?" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
@@ -63,7 +63,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="clearInputButton" layoutX="799.0" layoutY="662.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="149.0" style="-fx-background-color: #FF6E6E#FF6E6E;" text="Clear Input">
+      <Button fx:id="clearInputButton" layoutX="799.0" layoutY="662.0" mnemonicParsing="false" onAction="#clearTextFieldData" prefHeight="75.0" prefWidth="149.0" style="-fx-background-color: #FF6E6E#FF6E6E;" text="Clear Input">
          <font>
             <Font size="20.0" />
          </font>
@@ -85,7 +85,7 @@
             <Image url="@../../../../../Logo.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image2" fitHeight="73.0" fitWidth="184.0" layoutX="202.0" layoutY="669.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image2" fitHeight="58.0" fitWidth="89.0" layoutX="261.0" layoutY="691.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../3899497.png" />
          </image>
@@ -110,5 +110,20 @@
             <Label layoutX="57.0" layoutY="408.0" text="Time" />
          </children>
       </Pane>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="596.0" prefHeight="65.0" prefWidth="234.0" text="Noticed a donation centre has closed down?" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteCentre" layoutX="338.0" layoutY="596.0" mnemonicParsing="false" onAction="#deleteCentre" prefHeight="48.0" prefWidth="429.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to delete a donation centre!" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="image3" fitHeight="58.0" fitWidth="89.0" layoutX="261.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../3899497.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

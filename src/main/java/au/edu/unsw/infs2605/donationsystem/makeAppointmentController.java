@@ -42,6 +42,9 @@ public class makeAppointmentController {
     @FXML
     private Button confirmBookingButton;
     
+    @FXML 
+    private Button deleteCentre;
+    
     @FXML
     private ChoiceBox donationTypeChoice;
     
@@ -56,6 +59,9 @@ public class makeAppointmentController {
     
     @FXML 
     private ImageView image2;
+    
+    @FXML
+    private ImageView image3;
     
     //table view for the data 
     donorDatabase database = new donorDatabase();
@@ -142,10 +148,27 @@ public class makeAppointmentController {
         App.setRoot("MyDonationAppointments");
     }
     
-    //
+    //switch scene to create a new donation centre
     @FXML
     private void switchToNewDonorCentre() throws IOException {
         App.setRoot("RegisterANewDonorCentre");
     }
     
+    //switch scene to create a new donation centre
+    @FXML
+    private void deleteCentre() throws IOException {
+        
+        
+    }
+    
+    //clear input 
+    //https://stackoverflow.com/questions/12142518/combobox-clearing-value-issue 
+    @FXML
+    private void clearTextFieldData() {
+        donationTypeChoice.getItems().removeAll(donationTypeChoice.getItems());
+        donationCentreChoice.getItems().removeAll(donationCentreChoice.getItems());
+        apptDatePicker.setValue(null);
+        apptTimeChoice.getItems().removeAll(apptTimeChoice.getItems());
+        donationTypeChoice.requestFocus();
+    }
 }

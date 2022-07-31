@@ -165,11 +165,7 @@ public class myDonationAppointmentController {
         });
 
     }
-    
-     
-    
-    
-    
+
     //adding data to the tableview
     //https://www.youtube.com/watch?v=Ijr4VPJzSDg
     @FXML

@@ -151,6 +151,7 @@ public class donorDatabase {
         st.close();
         conn.close();
     }
+    
     //validate login credentials
     public boolean login(String username, String password) throws SQLException {
         //open connection
@@ -172,6 +173,29 @@ public class donorDatabase {
             conn.close();
             return false;
         }
+    }
+    
+    //delete donation centre and the data 
+    public void deleteDonationCentre() throws SQLException {
+        //create connection
+        Connection conn = DriverManager.getConnection(database);
+        
+        //create statement 
+        Statement st = conn.createStatement();
+        
+        //create query to delete data for centre
+        String query = "DELETE centre WHERE centre = 'Randwick Blood'";
+        ResultSet rs = st.executeQuery(query);
+        
+//        //condition to delete
+//        while(rs.next() == 'Randwick Blood') {
+//            donationList.add(new donationsData(rs.getString("type"), 
+//                rs.getString("centre"), rs.getString("date"), rs.getString("time")));
+        //}
+        
+        //close connection and statement
+        st.close();
+        conn.close();
     }
     
     //observable list for donations
