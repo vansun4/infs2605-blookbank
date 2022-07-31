@@ -234,6 +234,8 @@ public class myDonationAppointmentController {
         //deleting donor centre and associated time slots
         //https://stackoverflow.com/questions/34857007/how-to-delete-row-from-table-column-javafx
         
+        //alert pop up
+        //https://www.youtube.com/watch?v=KzxE3ZcSIvQ
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Warning");
         alert.setHeaderText("Deletion of Appointment Slot");

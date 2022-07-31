@@ -68,19 +68,27 @@ public class donorDatabase {
         st.close();
         conn.close();
         
-//        
-//        //delete a table based on a centre 
-//        String deleteQuery = "DELETE FROM Donations WHERE CENTRE = 'Randwick Blood'";
-//        
-//        //execute query
-//        st.execute(deleteQuery);
-//        
-//        //close connection and statements
-//        st.close();
-//        conn.close();
+        //Create Donation Centre Table
+        //Needs to contain donation centre name, address and contact
+        String makeQuery = "CREATE TABLE IF NOT EXISTS Centre"
+                + "(CENTRE TEXT PRIMARY KEY, "
+                + "LOCATION TEXT NOT NULL, "
+                + "CONTACT INT NOT NULL "
+                + ");";
+
         
+        //execute query
+        st.execute(makeQuery);
+        
+        //insert data into Donation Table 
+        insertCentreData();
+        
+        //close connection and statements
+        st.close();
+        conn.close();
     }
     
+    //method to insert data 
     public void insertDonationData() throws SQLException {
         //create connection
         Connection conn = DriverManager.getConnection(database);
@@ -105,7 +113,7 @@ public class donorDatabase {
             pSt.setString(1, type[i]);
             pSt.setString(2, centre[i]);
             pSt.setString(3, date[i]);
-            pSt.setString(3, time[i]);
+            pSt.setString(4, time[i]);
             pSt.executeUpdate();
         }
         
@@ -114,6 +122,38 @@ public class donorDatabase {
         conn.close();
     }
     
+    //insert donation centre details
+    public void insertCentreData() throws SQLException {
+        //create connection
+        Connection conn = DriverManager.getConnection(database);
+        
+        //create statement 
+        Statement st = conn.createStatement();
+        
+        //create query to insert data for donation
+        PreparedStatement pSt = conn.prepareStatement (
+            "INSERT OR IGNORE INTO Centre (centre, location, contact) VALUES (?,?,?)"
+        );
+        
+        
+        //data to be inserted
+        String[] centre = {"Randwick Blood", "Campsie Health", "Chatswood Plus", "Epping Health"};
+        String[] location = {"6 Randwick Parade, Randwick, 2001", "389 Campsie St, Campsie, 2136",
+            "63 Chatswood Ave, Chatswood, 2010", "22 Epping Rd, Epping, 2115"};
+        int[] contact = {96112336, 96558741, 963317851, 96332117};
+        
+        //loop the insert the data
+        for (int i = 0; i < 2; i++) {
+            pSt.setString(1, centre[i]);
+            pSt.setString(2, location[i]);
+            pSt.setInt(3, contact[i]);
+            pSt.executeUpdate();
+        }
+        
+        //close connection and statement
+        st.close();
+        conn.close();
+    }
     //validate login credentials
     public boolean login(String username, String password) throws SQLException {
         //open connection
@@ -158,5 +198,8 @@ public class donorDatabase {
         conn.close();
         return donationList;
     }
+    
+    //observable list for centre
+    
         
 }
