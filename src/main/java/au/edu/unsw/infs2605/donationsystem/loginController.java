@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -40,7 +41,22 @@ public class loginController {
     @FXML
     private Button loginButton;
     
-   
+    @FXML
+    private ImageView image1;
+    
+    @FXML
+    private ImageView image2;
+    
+    @FXML
+    private ImageView image3;
+    
+    @FXML
+    private ImageView image4;
+    
+    @FXML
+    private ImageView image5;
+    
+
     //method to login into the program
     @FXML
     private void handleLoginButtonFunction(ActionEvent event) throws IOException, SQLException {

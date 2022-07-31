@@ -72,14 +72,13 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <TableView fx:id="cenData" layoutX="22.0" layoutY="147.0" prefHeight="345.0" prefWidth="727.0">
+      <TableView fx:id="cenData" layoutX="40.0" layoutY="226.0" prefHeight="345.0" prefWidth="727.0">
         <columns>
           <TableColumn fx:id="centreCol" prefWidth="213.0" text="Donation Centre" />
             <TableColumn fx:id="addressCol" prefWidth="350.0" text="Address" />
             <TableColumn fx:id="phoneCol" prefWidth="163.0" text="Contact Number" />
         </columns>
       </TableView>
-      <Label layoutX="227.0" layoutY="119.0" text="HeroBlood currently have the following location " />
       <ImageView fx:id="image1" fitHeight="108.0" fitWidth="92.0" layoutX="1267.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../Logo.png" />
@@ -90,5 +89,10 @@
             <Image url="@../../../../../3899497.png" />
          </image>
       </ImageView>
+      <Label layoutX="181.0" layoutY="143.0" prefHeight="73.0" prefWidth="516.0" text="HeroBlood currently have these centres:" textAlignment="CENTER" textFill="#a44141">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

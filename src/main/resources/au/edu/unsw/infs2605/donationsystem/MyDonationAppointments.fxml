@@ -25,10 +25,10 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Button>
-      <TableView fx:id="donation" layoutX="25.0" layoutY="215.0" opacity="0.89" prefHeight="182.0" prefWidth="1316.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
+      <TableView fx:id="donation" layoutX="25.0" layoutY="232.0" opacity="0.89" prefHeight="182.0" prefWidth="1316.0" style="-fx-background-color: #FDF8F8#FDF8F8;">
         <columns>
           <TableColumn fx:id="donationTypeCol" prefWidth="368.0" text="Donation Type " />
-          <TableColumn fx:id="donorCentreCol" prefWidth="397.0" text="Donor Centre" />
+          <TableColumn fx:id="donorCentreCol" prefWidth="397.0" text="Donation Centre" />
           <TableColumn fx:id="dateCol" prefWidth="256.0" text="Date" />
           <TableColumn fx:id="timeCol" prefWidth="294.0" text="Time" />
         </columns>
@@ -47,8 +47,8 @@
          </font>
       </Label>
       <Button fx:id="Logout" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log Out" />
-      <Button fx:id="addData" layoutX="952.0" layoutY="597.0" mnemonicParsing="false" onAction="#addButtonAction" text="add" />
-      <HBox layoutX="25.0" layoutY="481.0" prefHeight="83.0" prefWidth="1005.0" spacing="80.0" style="-fx-background-color: #FFF2E1#FFF2E1 #FFF2E1#FFF2E1 #FFF2E1#FFF2E1 #FFF2E1#FFF2E1;">
+      <Button fx:id="addData" layoutX="83.0" layoutY="433.0" mnemonicParsing="false" onAction="#addButtonAction" text="add" />
+      <HBox layoutX="21.0" layoutY="540.0" prefHeight="64.0" prefWidth="1005.0" spacing="80.0" style="-fx-background-color: #FFF2E1#FFF2E1 #FFF2E1#FFF2E1 #FFF2E1#FFF2E1 #FFF2E1#FFF2E1;">
          <children>
             <TextField fx:id="donationTypeText" alignment="CENTER" prefHeight="25.0" prefWidth="217.0" promptText="enter a donation type">
                <tooltip>
@@ -72,10 +72,10 @@
             </TextField>
          </children>
          <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+            <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
          </padding>
       </HBox>
-      <Label layoutX="445.0" layoutY="150.0" text="Here are your Past Appointments" textFill="#a44141">
+      <Label layoutX="444.0" layoutY="141.0" text="Here are your Past Appointments" textFill="#a44141">
          <font>
             <Font size="32.0" />
          </font>
@@ -85,12 +85,42 @@
             <Image url="@../../../../../Logo.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image2" fitHeight="389.0" fitWidth="378.0" layoutX="1001.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image2" fitHeight="324.0" fitWidth="327.0" layoutX="1026.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../6745435.png" />
          </image>
       </ImageView>
-      <Label layoutX="515.0" layoutY="188.0" prefHeight="27.0" prefWidth="364.0" text="Double click on an entry to update your update" textAlignment="CENTER" textFill="#a44141">
+      <Label layoutX="507.0" layoutY="180.0" prefHeight="27.0" prefWidth="364.0" text="Double click on an entry to update your update" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="426.0" prefHeight="39.0" prefWidth="364.0" text="Add a new appointment record" textAlignment="CENTER" textFill="#a44141">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="501.0" prefHeight="39.0" prefWidth="117.0" text="Donation Type" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="327.0" layoutY="501.0" prefHeight="39.0" prefWidth="117.0" text="Donation Centre" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="582.0" layoutY="501.0" prefHeight="39.0" prefWidth="166.0" text="Appointment Date " textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="846.0" layoutY="501.0" prefHeight="39.0" prefWidth="166.0" text="Appointment Time" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="406.0" layoutY="463.0" prefHeight="27.0" prefWidth="364.0" text="Missing an appointment? Add it using the textfields below." textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>

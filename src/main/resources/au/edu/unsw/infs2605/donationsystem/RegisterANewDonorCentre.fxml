@@ -10,22 +10,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.registerNewDonorCentreController">
    <children>
-      <ImageView fitHeight="768.0" fitWidth="1366.0" opacity="0.31">
-         <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/iStock-627290560smaller-scaled.jpeg" />
-         </image>
-      </ImageView>
       <TextField fx:id="centreTextField" layoutX="98.0" layoutY="208.0" prefHeight="56.0" prefWidth="571.0" promptText="e.g; Kensington Blood Centre" AnchorPane.leftAnchor="98.0">
          <font>
             <Font size="12.0" />
          </font>
       </TextField>
-      <Button fx:id="registerCentreButton" layoutX="425.0" layoutY="611.0" mnemonicParsing="false" onAction="#saveDataWhenCreated" prefHeight="97.0" prefWidth="246.0" style="-fx-background-color: #9ADA9A#9ADA9A #9ADA9A#9ADA9A;" text="Register Donor Centre" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="registerCentreButton" layoutX="424.0" layoutY="611.0" mnemonicParsing="false" onAction="#saveDataWhenCreated" prefHeight="63.0" prefWidth="246.0" style="-fx-background-color: #9ADA9A#9ADA9A #9ADA9A#9ADA9A;" text="Register Donor Centre" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="clearInputButton" layoutX="100.0" layoutY="611.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="246.0" style="-fx-background-color: #FF6E6E#FF6E6E #FF6E6E#FF6E6E;" text="Clear Input">
+      <Button fx:id="clearInputButton" layoutX="98.0" layoutY="611.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="246.0" style="-fx-background-color: #FF6E6E#FF6E6E #FF6E6E#FF6E6E;" text="Clear Input">
          <font>
             <Font size="21.0" />
          </font>
@@ -65,15 +60,14 @@
             <Font name="System Bold" size="60.0" />
          </font>
       </Label>
-      <ImageView fitHeight="593.0" fitWidth="776.0" layoutX="736.0" layoutY="156.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image1" fitHeight="607.0" fitWidth="662.0" layoutX="710.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/ezgif-1-7660438c87.png" />
+            <Image url="@../../../../../blood-donation-vector-illustration-blood-donation-vector-illustration-flat-mini-persons-concept-emergency-donor-aid-170029357.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1134.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="114.0" fitWidth="135.0" layoutX="1226.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image2" fitHeight="103.0" fitWidth="119.0" layoutX="1247.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../../Desktop/untitled%20folder/Logo.png" />
+            <Image url="@../../../../../Logo.png" />
          </image>
       </ImageView>
    </children>
