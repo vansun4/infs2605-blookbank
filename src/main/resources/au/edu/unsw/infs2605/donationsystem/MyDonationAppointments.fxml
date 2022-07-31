@@ -94,7 +94,7 @@
             <Image url="@../../../../../6745435.png" />
          </image>
       </ImageView>
-      <Label layoutX="507.0" layoutY="180.0" prefHeight="27.0" prefWidth="364.0" text="Double click on an entry to update your update" textAlignment="CENTER">
+      <Label layoutX="501.0" layoutY="177.0" prefHeight="27.0" prefWidth="364.0" text="Double click on an entry to update your appointment history " textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>

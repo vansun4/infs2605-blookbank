@@ -56,8 +56,8 @@ public class registerNewDonorCentreController {
         
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
-        alert.setHeaderText("Unconfirmed Appointment Slot");
-        alert.setContentText("Are the details correct for your appointment?");
+        alert.setHeaderText("Unconfirmed Donation Centre Details");
+        alert.setContentText("Are the details correct for this new donation centre?");
         
         Optional<ButtonType> results = alert.showAndWait();
         if(results.isPresent() && results.get() == ButtonType.OK) {
