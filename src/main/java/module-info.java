@@ -13,6 +13,9 @@ module au.edu.unsw.infs2605.donationsystem {
 
     opens au.edu.unsw.infs2605.donationsystem to javafx.fxml;
     opens au.edu.unsw.infs2605.donationsystem.data to javafx.fxml;
+    //opens au.edu.unsw.infs2605.donationsystem.data.donationCentreData to javafx.fxml;
     exports au.edu.unsw.infs2605.donationsystem;
     exports au.edu.unsw.infs2605.donationsystem.data;
+    //exports au.edu.unsw.infs2605.donationsystem.data.donationCentreData;
+    
 }

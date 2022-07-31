@@ -4,6 +4,7 @@
  */
 package au.edu.unsw.infs2605.donationsystem;
 
+import au.edu.unsw.infs2605.donationsystem.data.donationCentreData;
 import au.edu.unsw.infs2605.donationsystem.data.donationsData;
 import au.edu.unsw.infs2605.donationsystem.database.donorDatabase;
 import java.io.IOException;
@@ -21,6 +22,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 
 /**
  * @author vanessa
@@ -48,6 +50,27 @@ public class makeAppointmentController {
     @FXML
     private ChoiceBox apptTimeChoice;
     
+    @FXML 
+    private ImageView image1;
+    
+    @FXML 
+    private ImageView image2;
+    
+    //table view for the data 
+    donorDatabase database = new donorDatabase();
+    
+    @FXML
+    private TableView<donationCentreData> cenData = new TableView<>();
+    
+    @FXML 
+    TableColumn<donationCentreData, String> centreCol;
+    
+    @FXML
+    TableColumn<donationCentreData, String> addressCol;
+    
+    @FXML
+    TableColumn<donationCentreData, Integer> phoneCol;
+    
     @FXML
     private DatePicker apptDatePicker;
     String apptDateString;
@@ -60,6 +83,20 @@ public class makeAppointmentController {
     
     @FXML 
     public void initialize() throws SQLException {
+        //get list of the donations in the donorDatabase
+        ObservableList<donationCentreData> cen = database.getCentreData();
+       
+        
+        //set list into tableview
+        cenData.setItems(cen);
+        
+        //set all the columns into tableview columns
+        centreCol.setCellValueFactory(new PropertyValueFactory<>("donationCentre"));
+        addressCol.setCellValueFactory(new PropertyValueFactory<>("donationAddress"));
+        phoneCol.setCellValueFactory(new PropertyValueFactory<>("donationPhoneNo"));
+  
+        
+        
         //sets list of options
         ObservableList<String> donorTypeList = FXCollections.observableArrayList("Blood","Plasma","Platelet");
         ObservableList<String> donorCentreList = FXCollections.observableArrayList("Randwick Blood", "Campsie Health", 

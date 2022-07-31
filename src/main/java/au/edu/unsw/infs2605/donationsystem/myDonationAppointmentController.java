@@ -36,14 +36,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.ImageView;
 
 /**
  *
  * @author vanessa
  */
-public class myDonationAppointmentController {
-    private donationsData newRec = null;
-    
+public class myDonationAppointmentController {    
     //fxids
     @FXML
     private Button makeNewApptButton; 
@@ -86,18 +85,14 @@ public class myDonationAppointmentController {
     @FXML 
     private TextField timeText;
     
-//    @FXML
-//    private Tooltip dType = new Tooltip("Enter Donation Type");
-//    
-//    @FXML
-//    private Tooltip dCentre = new Tooltip("Enter Donation Centre");
-//    
-//    @FXML
-//    private Tooltip dDate = new Tooltip("Enter Date");
-//    
-//    @FXML
-//    private Tooltip dTime = new Tooltip("Enter Time");
+    @FXML
+    private ImageView image1;
     
+    @FXML 
+    private ImageView image2;
+    
+    
+
     @FXML
     private Button addData;
     

@@ -4,6 +4,7 @@
  */
 package au.edu.unsw.infs2605.donationsystem.database;
 
+import au.edu.unsw.infs2605.donationsystem.data.donationCentreData;
 import au.edu.unsw.infs2605.donationsystem.data.donationsData;
 import au.edu.unsw.infs2605.donationsystem.data.donorData;
 import java.sql.Connection;
@@ -63,11 +64,7 @@ public class donorDatabase {
         
         //insert data into Donation Table 
         insertDonationData();
-        
-        //close connection and statements
-        st.close();
-        conn.close();
-        
+
         //Create Donation Centre Table
         //Needs to contain donation centre name, address and contact
         String makeQuery = "CREATE TABLE IF NOT EXISTS Centre"
@@ -109,7 +106,7 @@ public class donorDatabase {
         String[] time = {"12:00PM", "04:30PM", "02:00PM", "09:00AM"};
         
         //loop the insert the data
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             pSt.setString(1, type[i]);
             pSt.setString(2, centre[i]);
             pSt.setString(3, date[i]);
@@ -143,7 +140,7 @@ public class donorDatabase {
         int[] contact = {96112336, 96558741, 963317851, 96332117};
         
         //loop the insert the data
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             pSt.setString(1, centre[i]);
             pSt.setString(2, location[i]);
             pSt.setInt(3, contact[i]);
@@ -200,6 +197,25 @@ public class donorDatabase {
     }
     
     //observable list for centre
-    
+    public ObservableList<donationCentreData> getCentreData() throws SQLException {
+        //Get ResultSet of all donation data exisitng in the databasw
+        Connection conn = DriverManager.getConnection(database);
+        Statement st = conn.createStatement();
+        String query = "SELECT centre, location, contact FROM Centre";
+        ResultSet rs = st.executeQuery(query);
+        
+        ObservableList<donationCentreData> centreList = FXCollections.observableArrayList();
+        
+        //add each row in resultset to donationlist 
+        while(rs.next()) {
+            centreList.add(new donationCentreData(rs.getString("centre"), 
+                rs.getString("location"), rs.getInt("contact")));
+        }
+        
+        //close connection
+        st.close();
+        conn.close();
+        return centreList;
+    }
         
 }
