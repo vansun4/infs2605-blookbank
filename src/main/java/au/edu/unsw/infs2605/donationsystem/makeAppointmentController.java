@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -49,6 +50,13 @@ public class makeAppointmentController {
     
     @FXML
     private DatePicker apptDatePicker;
+    String apptDateString;
+    
+    @FXML
+     public void selectApptDatePicker(ActionEvent event){
+        LocalDate apptDate = apptDatePicker.getValue();
+        apptDateString = apptDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+     }
     
     @FXML 
     public void initialize() throws SQLException {
@@ -71,8 +79,16 @@ public class makeAppointmentController {
     }
     
     //once apppointment is confirmed, switch to the home page 
+    List<donationsData> don = App.getDonationsRecords();
+    
+    
     @FXML
     private void confirmBooking() throws IOException {
+        don.add(new donationsData(donationTypeChoice.getValue().toString(),
+                donationCentreChoice.getValue().toString(),apptDatePicker.getValue().toString(),
+                apptTimeChoice.getValue().toString()));
+        
+        App.setDonationsRecords(don);
         App.setRoot("MyDonationAppointments");
     }
     

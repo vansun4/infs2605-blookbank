@@ -13,12 +13,16 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -183,20 +187,7 @@ public class myDonationAppointmentController {
                 donate.setDate(event.getNewValue());
             }
         });
-        
-        //add data to the table view 
-//        addData.setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent arg0) {
-//                donationsData donationAddition = new donationsData(id.getText(), donationTypeText.getText(), centreText.getText(),
-//                dateText.getText(), timeText.getText());
-//                add(donationAddition);
-//            }
-//        });
-//        
-  
-    
-        
+
         //observable list data
         ObservableList<String> donorTypeList = FXCollections.observableArrayList("Blood","Plasma","Platelet");
         ObservableList<String> donorCentreList = FXCollections.observableArrayList("Randwick Blood", "Campsie Health", 
@@ -215,16 +206,26 @@ public class myDonationAppointmentController {
         apptTimeChoice.setValue("");  
 
     }
-
-    public void add(donationsData donationAddition) {
-        donation.getItems().add(donationAddition);
-    }
-    
+    //adding data to the tableview
+    //https://www.youtube.com/watch?v=Ijr4VPJzSDg
     @FXML
     public void addButtonAction(ActionEvent event) throws IOException {
         donationsData donationAddition = new donationsData(donationTypeText.getText(), centreText.getText(),
                 dateText.getText(), timeText.getText());
                 add(donationAddition);
+    }
+    
+    public void add(donationsData donationAddition) {
+        donation.getItems().add(donationAddition);
+        clearTextFieldData();
+    }
+    
+    private void clearTextFieldData() {
+        donationTypeText.clear();
+        centreText.clear();
+        dateText.clear();
+        timeText.clear();
+        donationTypeText.requestFocus();
     }
   
     //delete the appointment time 
@@ -232,11 +233,20 @@ public class myDonationAppointmentController {
     private void deleteAppointment(ActionEvent event) throws IOException { 
         //deleting donor centre and associated time slots
         //https://stackoverflow.com/questions/34857007/how-to-delete-row-from-table-column-javafx
-        donation.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         
-        ObservableList<donationsData> selectedRows = donation.getSelectionModel().getSelectedItems();
-        ArrayList<donationsData> rows = new ArrayList<>(selectedRows);
-        rows.forEach(row -> donation.getItems().remove(row));
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setTitle("Warning");
+        alert.setHeaderText("Deletion of Appointment Slot");
+        alert.setContentText("You are about to delete your appointment slot. Confirm?");
+        
+        Optional<ButtonType> results = alert.showAndWait();
+        if(results.isPresent() && results.get() == ButtonType.OK) {
+            donation.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        
+            ObservableList<donationsData> selectedRows = donation.getSelectionModel().getSelectedItems();
+            ArrayList<donationsData> rows = new ArrayList<>(selectedRows);
+            rows.forEach(row -> donation.getItems().remove(row));
+        }
     }
     
     //update the appointment time 

@@ -11,7 +11,6 @@ package au.edu.unsw.infs2605.donationsystem.data;
 public class donationsData {
     
     //attributes
-    //private String id;
     private String donationType;
     private String donorCentre; 
     private String date;
@@ -19,25 +18,7 @@ public class donationsData {
     
     
     //constructor
-//    public donationsData() {
-//        id = "";
-//        donationType = "";
-//        donorCentre = "";
-//        date = "";
-//        time = "";
-//    }
-    
-    
-//    public donationsData(String id ,String donationType, String donorCentre, String date, String time) {
-//        this.id = id;
-//        this.donationType = donationType;
-//        this.donorCentre = donorCentre;
-//        this.date = date;
-//        this.time = time;
-//        
-//    }
-    
-     public donationsData(String donationType, String donorCentre, String date, String time) {
+    public donationsData(String donationType, String donorCentre, String date, String time) {
         this.donationType = donationType;
         this.donorCentre = donorCentre;
         this.date = date;
@@ -46,10 +27,6 @@ public class donationsData {
     }
     
     //getters
-//    public String getID() {
-//        return id;
-//    }
-    
     public String getDonationType() {
         return donationType;
     }
@@ -67,10 +44,6 @@ public class donationsData {
     }
     
     //setters
-//    public void setID(String id) {
-//        this.id = id;
-//    }    
-
     public void setDonationType(String donationType) {
         this.donationType = donationType;
     }

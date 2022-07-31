@@ -50,15 +50,6 @@ public class donorDatabase {
         
         //Create Donation Table 
         //Needs to contain donation type, donor centre, date, time
-//        String defineQuery = "CREATE TABLE IF NOT EXISTS Donations"
-//                + "(ID INTEGER PRIMARY KEY autoincrement, "
-//                + "TYPE TEXT NOT NULL, "
-//                + "CENTRE TEXT NOT NULL, "
-//                + "DATE TEXT NOT NULL, "
-//                + "TIME TEXT NOT NULL "
-//                + ");";
-        
-        
         String defineQuery = "CREATE TABLE IF NOT EXISTS Donations"
                 + "(TYPE TEXT PRIMARY KEY, "
                 + "CENTRE TEXT NOT NULL, "
@@ -98,10 +89,6 @@ public class donorDatabase {
         Statement st = conn.createStatement();
         
         //create query to insert data for donation
-//        PreparedStatement pSt = conn.prepareStatement (
-//            "INSERT OR IGNORE INTO Donations (id,type, centre, date, time) VALUES (?,?,?,?,?)"
-//        );
-
         PreparedStatement pSt = conn.prepareStatement (
             "INSERT OR IGNORE INTO Donations (type, centre, date, time) VALUES (?,?,?,?)"
         );
@@ -114,15 +101,6 @@ public class donorDatabase {
         String[] time = {"12:00PM", "04:30PM", "02:00PM", "09:00AM"};
         
         //loop the insert the data
-//        for (int i = 0; i < 4; i++) {
-//            pSt.setInt(1, i);
-//            pSt.setString(2, type[i]);
-//            pSt.setString(3, centre[i]);
-//            pSt.setString(4, date[i]);
-//            pSt.setString(5, time[i]);
-//            pSt.executeUpdate();
-//        }
-        
         for (int i = 0; i < 3; i++) {
             pSt.setString(1, type[i]);
             pSt.setString(2, centre[i]);
@@ -164,18 +142,12 @@ public class donorDatabase {
         //Get ResultSet of all donation data exisitng in the databasw
         Connection conn = DriverManager.getConnection(database);
         Statement st = conn.createStatement();
-//        String query = "SELECT id, type, centre, date, time FROM Donations";
-            String query = "SELECT type, centre, date, time FROM Donations";
+        String query = "SELECT type, centre, date, time FROM Donations";
         ResultSet rs = st.executeQuery(query);
         
         ObservableList<donationsData> donationList = FXCollections.observableArrayList();
         
         //add each row in resultset to donationlist 
-//        while(rs.next()) {
-//            donationList.add(new donationsData(rs.getString("id"), rs.getString("type"), 
-//                rs.getString("centre"), rs.getString("date"), rs.getString("time")));
-//        }
-        
         while(rs.next()) {
             donationList.add(new donationsData(rs.getString("type"), 
                 rs.getString("centre"), rs.getString("date"), rs.getString("time")));
