@@ -70,4 +70,10 @@ public class registerNewDonorCentreController {
         }
         
     }
+    
+    //switch to main 
+    @FXML
+    private void switchToMainPage() throws IOException {
+        App.setRoot("MyDonationAppointments");
+    }
 }

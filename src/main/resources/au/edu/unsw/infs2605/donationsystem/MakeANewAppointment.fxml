@@ -9,6 +9,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9ECEC#F9ECEC #F9ECEC#F9ECEC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.donationsystem.makeAppointmentController">
@@ -18,14 +19,14 @@
             <Font size="60.0" />
          </font>
       </Label>
-      <Button fx:id="newDonorCentreButton" layoutX="457.0" layoutY="663.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="77.0" prefWidth="292.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="newDonorCentreButton" layoutX="308.0" layoutY="661.0" mnemonicParsing="false" onAction="#switchToNewDonorCentre" prefHeight="77.0" prefWidth="292.0" style="-fx-background-color: #B0D8FE#B0D8FE;" text="Click here to register a new Donation Centre!" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="649.0" prefHeight="101.0" prefWidth="333.0" text="Do not see your Donation Centre?" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="673.0" prefHeight="65.0" prefWidth="176.0" text="Do not see your Donation Centre?" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="System Bold Italic" size="23.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
       <Label alignment="CENTER" layoutX="782.0" layoutY="119.0" prefHeight="89.0" prefWidth="509.0" text="Thank You" textAlignment="CENTER" textFill="#a11212">
@@ -57,19 +58,19 @@
       </Label>
       <DatePicker fx:id="apptDatePicker" layoutX="812.0" layoutY="580.0" prefHeight="48.0" prefWidth="307.0" promptText="04/04/2022" />
       <ChoiceBox fx:id="apptTimeChoice" layoutX="1137.0" layoutY="580.0" prefHeight="48.0" prefWidth="125.0" />
-      <Button fx:id="confirmBookingButton" layoutX="1068.0" layoutY="662.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="75.0" prefWidth="197.0" style="-fx-background-color: #9ADA9A#9ADA9A;" text="Confirm your booking" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="confirmBookingButton" layoutX="1085.0" layoutY="661.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="75.0" prefWidth="197.0" style="-fx-background-color: #9ADA9A#9ADA9A;" text="Confirm your booking" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="clearInputButton" layoutX="810.0" layoutY="662.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="198.0" style="-fx-background-color: #FF6E6E#FF6E6E;" text="Clear Input">
+      <Button fx:id="clearInputButton" layoutX="799.0" layoutY="662.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="149.0" style="-fx-background-color: #FF6E6E#FF6E6E;" text="Clear Input">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="homeButton" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Home">
+      <Button fx:id="homeButton" layoutX="39.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Return to Main">
          <font>
-            <Font size="25.0" />
+            <Font size="17.0" />
          </font>
       </Button>
       <TableView fx:id="cenData" layoutX="40.0" layoutY="226.0" prefHeight="345.0" prefWidth="727.0">
@@ -84,15 +85,30 @@
             <Image url="@../../../../../Logo.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image2" fitHeight="73.0" fitWidth="184.0" layoutX="356.0" layoutY="663.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image2" fitHeight="73.0" fitWidth="184.0" layoutX="202.0" layoutY="669.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../3899497.png" />
          </image>
       </ImageView>
-      <Label layoutX="181.0" layoutY="143.0" prefHeight="73.0" prefWidth="516.0" text="HeroBlood currently have these centres:" textAlignment="CENTER" textFill="#a44141">
+      <Label layoutX="127.0" layoutY="143.0" prefHeight="73.0" prefWidth="599.0" text="HeroBlood currently have these donation centres:" textAlignment="CENTER" textFill="#a44141">
          <font>
-            <Font size="29.0" />
+            <Font size="25.0" />
          </font>
       </Label>
+      <Pane layoutX="799.0" layoutY="136.0" prefHeight="557.0" prefWidth="478.0" style="-fx-background-color: 000000;" visible="false">
+         <children>
+            <Label layoutX="93.0" layoutY="25.0" prefHeight="48.0" prefWidth="292.0" text="Appointment Successfully Created">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="147.0" layoutY="93.0" text="Thank you for donating blood." />
+            <Label layoutX="136.0" layoutY="146.0" prefHeight="17.0" prefWidth="234.0" text="Your appointment detail is as followed:" />
+            <Label layoutX="38.0" layoutY="270.0" text="Donation Centre" />
+            <Label layoutX="43.0" layoutY="214.0" text="Donation Type" />
+            <Label layoutX="48.0" layoutY="329.0" text="Date" />
+            <Label layoutX="57.0" layoutY="408.0" text="Time" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

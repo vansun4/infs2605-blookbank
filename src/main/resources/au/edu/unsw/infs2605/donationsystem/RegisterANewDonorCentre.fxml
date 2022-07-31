@@ -25,12 +25,12 @@
             <Font size="21.0" />
          </font>
       </Button>
-      <Label layoutX="137.0" layoutY="152.0" text="1.  What is the name of the Donation Centre?" textFill="#720e0e">
+      <Label layoutX="137.0" layoutY="152.0" text="1.  What is the name of the donation centre?" textFill="#720e0e">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="148.0" layoutY="298.0" text="2.  Enter the Address of the Donor Centre:" textFill="#720e0e">
+      <Label layoutX="148.0" layoutY="298.0" text="2.  Enter the address of the donation centre:" textFill="#720e0e">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>
@@ -40,7 +40,7 @@
             <Font size="12.0" />
          </font>
       </TextField>
-      <Label layoutX="89.0" layoutY="455.0" prefHeight="38.0" prefWidth="621.0" text="3.  What is the phone number of the Donor Centre?" textAlignment="CENTER" textFill="#720e0e" wrapText="true">
+      <Label layoutX="73.0" layoutY="455.0" prefHeight="38.0" prefWidth="621.0" text="3.  What is the phone number of the donation centre?" textAlignment="CENTER" textFill="#720e0e" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>
@@ -50,12 +50,12 @@
             <Font size="12.0" />
          </font>
       </TextField>
-      <Button fx:id="backButton" layoutX="61.0" layoutY="41.0" mnemonicParsing="false" text="Back">
+      <Button fx:id="backButton" layoutX="24.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="34.0" prefWidth="170.0" text="Return to Main Page">
          <font>
-            <Font size="25.0" />
+            <Font size="17.0" />
          </font>
       </Button>
-      <Label layoutX="330.0" layoutY="27.0" prefHeight="73.0" prefWidth="736.0" text="Register a New Donor Centre" textAlignment="CENTER" textFill="#a44141">
+      <Label layoutX="293.0" layoutY="27.0" prefHeight="73.0" prefWidth="813.0" text="Register a New Donation Centre" textAlignment="CENTER" textFill="#a44141">
          <font>
             <Font name="System Bold" size="60.0" />
          </font>
@@ -65,7 +65,7 @@
             <Image url="@../../../../../blood-donation-vector-illustration-blood-donation-vector-illustration-flat-mini-persons-concept-emergency-donor-aid-170029357.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image2" fitHeight="103.0" fitWidth="119.0" layoutX="1247.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image2" fitHeight="103.0" fitWidth="119.0" layoutX="1233.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../Logo.png" />
          </image>

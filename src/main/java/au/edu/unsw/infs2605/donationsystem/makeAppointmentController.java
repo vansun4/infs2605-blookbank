@@ -23,6 +23,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 
 /**
  * @author vanessa
@@ -70,6 +71,9 @@ public class makeAppointmentController {
     
     @FXML
     TableColumn<donationCentreData, Integer> phoneCol;
+    
+    @FXML
+    private Pane receipt;
     
     @FXML
     private DatePicker apptDatePicker;
@@ -121,6 +125,8 @@ public class makeAppointmentController {
     
     @FXML
     private void confirmBooking() throws IOException {
+        
+        
         don.add(new donationsData(donationTypeChoice.getValue().toString(),
                 donationCentreChoice.getValue().toString(),apptDatePicker.getValue().toString(),
                 apptTimeChoice.getValue().toString()));
@@ -128,6 +134,7 @@ public class makeAppointmentController {
         App.setDonationsRecords(don);
         App.setRoot("MyDonationAppointments");
     }
+
     
     //switch scene back to the main page
     @FXML

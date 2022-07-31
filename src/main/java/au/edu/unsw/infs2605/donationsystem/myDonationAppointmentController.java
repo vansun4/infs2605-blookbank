@@ -23,6 +23,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -33,6 +34,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TitledPane;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
@@ -46,9 +48,6 @@ public class myDonationAppointmentController {
     //fxids
     @FXML
     private Button makeNewApptButton; 
-
-    @FXML
-    private Button deleteSlotButton;
     
     @FXML
     private Button updateApptButton;
@@ -61,17 +60,6 @@ public class myDonationAppointmentController {
     
     @FXML 
     private Button Logout;
-    
-    @FXML
-    private ChoiceBox donationTypeChoice;
-    
-    @FXML
-    private ChoiceBox apptTimeChoice;
-    
-    @FXML
-    private ChoiceBox donationCentreChoice;
-    
-    private Label id;
     
     @FXML 
     private TextField donationTypeText;
@@ -91,20 +79,13 @@ public class myDonationAppointmentController {
     @FXML 
     private ImageView image2;
     
+    @FXML 
+    private TitledPane filterPane;
     
-
     @FXML
     private Button addData;
-    
-    @FXML 
-    private Button deleteData;
-    
-    
 
-    @FXML
-    private DatePicker apptDatePicker;
-    
-    String apptDateString;
+
     
     //table view for the data 
     donorDatabase database = new donorDatabase();
@@ -184,6 +165,11 @@ public class myDonationAppointmentController {
         });
 
     }
+    
+     
+    
+    
+    
     //adding data to the tableview
     //https://www.youtube.com/watch?v=Ijr4VPJzSDg
     @FXML
@@ -228,14 +214,7 @@ public class myDonationAppointmentController {
             rows.forEach(row -> donation.getItems().remove(row));
         }
     }
-    
-    //update the appointment time 
-     @FXML
-     public void selectApptDatePicker(ActionEvent event){
-        LocalDate apptDate = apptDatePicker.getValue();
-        apptDateString = apptDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-     }
-    
+
     //generate appointment receipt 
     @FXML
     private void generateAppointmentReceipt() throws IOException {
